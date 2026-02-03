@@ -6,7 +6,7 @@
   <link href="https://www.exlink.top/atom.xml" rel="self"/>
   
   <link href="https://www.exlink.top/"/>
-  <updated>2026-02-02T14:51:09.336Z</updated>
+  <updated>2026-02-03T00:18:49.143Z</updated>
   <id>https://www.exlink.top/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重磅！三大运营商公告：增值税率由6%上调至9%，深度解读与影响分析</title>
+    <link href="https://www.exlink.top/2026/02/03/telecom-vat-rate-adjustment/"/>
+    <id>https://www.exlink.top/2026/02/03/telecom-vat-rate-adjustment/</id>
+    <published>2026-02-03T00:30:00.000Z</published>
+    <updated>2026-02-03T00:18:49.143Z</updated>
+    
+    <content type="html"><![CDATA[<p>2026年2月3日，中国移动、中国电信、中国联通三大运营商联合发布公告，宣布将调整电信服务的增值税税率。根据最新政策导向及公告内容，原适用6%税率的增值电信服务将统一调整为9%。</p><p>此次调整是近年来电信行业税制的重大变革，旨在通过统一税率来简化税务管理，并进一步理顺增值税抵扣链条。</p><p><img src="/images/telecom-vat-hike.png" alt="增值税率调整示意图"></p><h2 id="一、-明确调整税率的税种">一、 明确调整税率的税种</h2><p>在此次调整之前，电信业执行差异化税率：</p><ul><li><strong>基础电信服务</strong>（如语音通话、出租带宽等）：适用 <strong>9%</strong> 税率。</li><li><strong>增值电信服务</strong>（如互联网接入、短信、彩信、数字化服务等）：适用 <strong>6%</strong> 税率。</li></ul><p><strong>本次公告明确：</strong><br>自规定日期起，<strong>增值电信服务（Value-added Telecommunications Services）</strong> 的增值税税率将由 <strong>6%</strong> 上调至 <strong>9%</strong>。<br>这意味着，未来电信运营商开具的“电信服务费”、“互联网接入费”等发票，税率栏将统一显示为 <strong>9%</strong>，实现了电信业税率的全面并轨。</p><h2 id="二、-对企业及市场的影响分析">二、 对企业及市场的影响分析</h2><p>此次税率上调对不同主体将产生截然不同的影响。我们通过下方图表为您直观解析：</p><div class="mermaid">graph TD    A[税率调整: 6% -> 9%] --> B(电信运营商)    A --> C(企业客户<一般纳税人>)    A --> D(个人消费者/小规模纳税人)<pre><code>B --&gt;|含税价格不变| E[不含税收入下降&lt;利润承压&gt;]B --&gt;|维持不含税价| F[由于税额增加-&gt;含税总价上涨]C --&gt;|获取9%专用发票| G[进项抵扣额增加]G --&gt; H{实际成本变化}H --&gt;|若含税价不变| I[实际采购成本降低&lt;利好&gt;]H --&gt;|若含税价上涨| J[成本基本持平]D --&gt;|无法抵扣| K[若涨价则成本增加]</code></pre></div><h3 id="1-对企业客户（一般纳税人）的影响：重大利好">1. 对企业客户（一般纳税人）的影响：重大利好</h3><p>对于具备一般纳税人资格的企业而言，这通常是一个<strong>利好消息</strong>。</p><ul><li><strong>进项抵扣增加</strong>：企业在支付同样的含税通信费时，以前只能抵扣6%的进项税，现在可以抵扣9%。</li><li><strong>成本降低</strong>：假设运营商维持现有的套餐含税价格不变（如100元套餐），企业的可抵扣税额从约5.66元增加到约8.26元，实际计入成本的金额相应减少。</li></ul><blockquote><p><strong>案例测算：</strong><br>某互联网企业每月通信费支出为106万元（含税）。</p><ul><li><strong>调整前（6%）</strong>：不做进项抵扣或抵扣额为 6万元。</li><li><strong>调整后（9%）</strong>：进项抵扣额为 $106 \div 1.09 \times 0.09 \approx 8.75$ 万元。</li><li><strong>结论</strong>：在支出不变的情况下，企业多获得了2.75万元的进项税抵扣，直接减轻了增值税缴纳负担。</li></ul></blockquote><h3 id="2-对电信运营商的影响：短期阵痛与长期规范">2. 对电信运营商的影响：短期阵痛与长期规范</h3><ul><li><strong>收入影响</strong>：针对大量且价格敏感的个人用户（C端），运营商很难直接通过涨价来转嫁3%的税率差。如果C端套餐价格保持不变，意味着运营商需要从原有的收入中多划拨一部分去缴纳税款（销项税增加），这会挤压运营商的利润空间。</li><li><strong>管理优化</strong>：长期来看，统一税率消除了混业经营带来的税务核算难题，降低了税务合规风险。</li></ul><h3 id="3-对个人消费者的影响">3. 对个人消费者的影响</h3><p>对于普通个人用户，由于我们不涉及增值税抵扣，影响主要取决于运营商的<strong>定价策略</strong>。</p><ul><li>鉴于通信市场的激烈竞争，运营商直接针对现有C端套餐涨价的可能性较小。</li><li>大概率情况是，现有资费保持不变，个人用户的实际支出不会有感知。</li></ul><h2 id="三、-企业应对建议">三、 企业应对建议</h2><ol><li><strong>关注发票税率</strong>：财务部门应及时留意运营商账单及发票税率的变化，确保进项税额“应抵尽抵”。</li><li><strong>合同梳理</strong>：对于正在执行的长期通信服务合同，关注是否约定了“含税价”或“不含税价”。如果合同约定的是“不含税价”，企业可能需要支付更高的总价（因为税额加高了），建议及时与运营商协商。</li><li><strong>系统参数调整</strong>：企业内部ERP系统或报销系统若有预设税率逻辑，需及时更新电信服务费的默认税率为9%。</li></ol><p>此次调整是国家完善现代增值税制度的重要一步，企业财务人员应以此为契机，进一步优化企业的进项管理水平。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2026年2月3日，中国移动、中国电信、中国联通三大运营商联合发布公告，宣布将调整电信服务的增值税税率。根据最新政策导向及公告内容，原适用6%税率的增值电信服务将统一调整为9%。&lt;/p&gt;
+&lt;p&gt;此次调整是近年来电信行业税制的重大变革，旨在通过统一税率来简化税务管理，并进一步</summary>
+      
+    
+    
+    
+    <category term="财税知识" scheme="https://www.exlink.top/categories/%E8%B4%A2%E7%A8%8E%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="增值税" scheme="https://www.exlink.top/tags/%E5%A2%9E%E5%80%BC%E7%A8%8E/"/>
+    
+    <category term="三大运营商" scheme="https://www.exlink.top/tags/%E4%B8%89%E5%A4%A7%E8%BF%90%E8%90%A5%E5%95%86/"/>
+    
+    <category term="税率调整" scheme="https://www.exlink.top/tags/%E7%A8%8E%E7%8E%87%E8%B0%83%E6%95%B4/"/>
+    
+    <category term="财税新闻" scheme="https://www.exlink.top/tags/%E8%B4%A2%E7%A8%8E%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>2026 增值税大变局！国家税务总局连发六大公告</title>
@@ -398,9 +429,9 @@
     <category term="IT技术" scheme="https://www.exlink.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="2026" scheme="https://www.exlink.top/tags/2026/"/>
-    
     <category term="AI" scheme="https://www.exlink.top/tags/AI/"/>
+    
+    <category term="2026" scheme="https://www.exlink.top/tags/2026/"/>
     
     <category term="趋势" scheme="https://www.exlink.top/tags/%E8%B6%8B%E5%8A%BF/"/>
     
@@ -620,33 +651,6 @@
     <category term="数据分析" scheme="https://www.exlink.top/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
     <category term="SORT" scheme="https://www.exlink.top/tags/SORT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EXCEL365函数新霸主：FILTER函数在批量查找与动态图表中的应用</title>
-    <link href="https://www.exlink.top/2026/01/09/excel-365-filter-function/"/>
-    <id>https://www.exlink.top/2026/01/09/excel-365-filter-function/</id>
-    <published>2026-01-09T12:15:00.000Z</published>
-    <updated>2026-01-09T12:14:13.941Z</updated>
-    
-    <content type="html"><![CDATA[<p>在Excel 365发布之前，我们想要实现“批量查找”或者“一对多查找”，通常需要借助辅助列、复杂的数组公式（如INDEX+SMALL+IF）或者万能的VBA。但随着动态数组功能的推出，<strong>FILTER函数</strong>横空出世，彻底改变了这一局面。它不仅语法简洁，而且自带“溢出”特性，能够根据条件实时刷新数据，是制作动态报表的绝对利器。</p><p>今天我们就来盘点一下FILTER函数的四大核心应用场景。</p><p><img src="/images/excel-filter-cover.png" alt="Excel Filter Cover"></p><h2 id="1-单条件批量查找：告别辅助列">1. 单条件批量查找：告别辅助列</h2><p>这是FILTER函数最基础也最常用的功能。假设我们有一份销售数据，想要快速提取出“东部”地区的所有记录。</p><p><strong>语法</strong>：<code>=FILTER(数组, 条件, [空值返回])</code></p><p><strong>公式示例</strong>：</p><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">FILTER</span>(<span class="symbol">A2</span>:<span class="symbol">C20</span>, <span class="symbol">B2</span>:<span class="symbol">B20</span>=<span class="string">&quot;东部&quot;</span>, <span class="string">&quot;无数据&quot;</span>)</span><br></pre></td></tr></table></figure><p>只需在一个单元格输入公式，所有符合条件的数据就会自动“溢出”填充到相邻单元格中，无需手动下拉复制。如果源数据发生变化，筛选结果也会自动更新。</p><p><img src="/images/excel-filter-basic.png" alt="单条件筛选示例"></p><h2 id="2-多条件批量查找：AND与OR的逻辑魅力">2. 多条件批量查找：AND与OR的逻辑魅力</h2><p>现实工作中的筛选条件往往不止一个。FILTER函数通过简单的逻辑运算符号就能轻松搞定多条件筛选。</p><ul><li><strong>“且”关系（同时满足）</strong>：使用星号 <code>*</code> 连接条件。</li><li><strong>“或”关系（任意满足）</strong>：使用加号 <code>+</code> 连接条件。</li></ul><p><strong>场景一</strong>：筛选“东部”地区<strong>且</strong>销售额大于10000的记录。</p><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">FILTER</span>(<span class="symbol">A2</span>:<span class="symbol">C20</span>, (<span class="symbol">B2</span>:<span class="symbol">B20</span>=<span class="string">&quot;东部&quot;</span>) * (<span class="symbol">C2</span>:<span class="symbol">C20</span>&gt;<span class="number">10000</span>))</span><br></pre></td></tr></table></figure><p><strong>场景二</strong>：筛选“东部”地区<strong>或</strong>“北部”地区的记录。</p><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">FILTER</span>(<span class="symbol">A2</span>:<span class="symbol">C20</span>, (<span class="symbol">B2</span>:<span class="symbol">B20</span>=<span class="string">&quot;东部&quot;</span>) + (<span class="symbol">B2</span>:<span class="symbol">B20</span>=<span class="string">&quot;北部&quot;</span>))</span><br></pre></td></tr></table></figure><p>逻辑清晰，一目了然，再也不用嵌套无数层的IF函数了。</p><p><img src="/images/excel-filter-multi-condition.png" alt="多条件筛选逻辑"></p><h2 id="3-进阶：与COUNTIF组合（列表筛选）">3. 进阶：与COUNTIF组合（列表筛选）</h2><p>如果我们需要筛选的条件不是一个固定的值，而是一个“列表”呢？比如，只要是“指定名单”中的客户，就全部筛选出来。这时候，FILTER与COUNTIF简直是天作之合。</p><p><strong>思路</strong>：利用COUNTIF判断源数据中的每一项是否存在于“指定名单”中，如果存在返回1（True），不存在返回0（False），以此作为FILTER的筛选条件。</p><p><strong>公式示例</strong>：</p><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">FILTER</span>(<span class="symbol">A2</span>:<span class="symbol">C20</span>, <span class="built_in">COUNTIF</span>(<span class="symbol">E2</span>:<span class="symbol">E5</span>, <span class="symbol">A2</span>:<span class="symbol">A20</span>))</span><br></pre></td></tr></table></figure><p><em>注：E2:E5为指定的客户名单区域，A2:A20为源数据中的客户列。</em></p><p>这个组合技在核对数据、提取特定群体信息时效率极高。</p><p><img src="/images/excel-filter-countif.png" alt="FILTER与COUNTIF组合"></p><h2 id="4-终极应用：制作动态图表">4. 终极应用：制作动态图表</h2><p>FILTER函数最让人惊艳的特性在于它返回的是一个<strong>动态数组</strong>。我们可以利用这个特性，结合Excel的引用符号 <code>#</code>，制作出随条件自动变化的动态图表。</p><p><strong>步骤</strong>：</p><ol><li><strong>设置筛选器</strong>：使用数据验证制作一个下拉菜单（例如选择“地区”）。</li><li><strong>生成动态数据源</strong>：使用FILTER函数根据下拉菜单的值筛选出对应数据。</li><li><strong>创建图表</strong>：选中FILTER函数生成的溢出区域（例如 <code>E2#</code>，<code>#</code>代表选中该数组的所有结果）作为图表的数据源。</li></ol><p>当你在下拉菜单中切换地区时，FILTER函数会重新计算并溢出新数据，引用的图表数据源随之改变，图表也就实现了瞬间切换！</p><p><img src="/images/excel-filter-dynamic-chart.png" alt="动态图表示例"></p><h2 id="总结">总结</h2><p>FILTER函数是Excel 365中最具颠覆性的函数之一。它让数据提取变得前所未有的简单和灵活。掌握了它，配合动态数组的特性，你的数据分析效率将会有质的飞跃。</p><p>快去打开你的Excel试一试吧！</p>]]></content>
-    
-    
-    <summary type="html">深入解析Excel 365中FILTER函数的强大功能，从基础的单条件、多条件筛选，到与COUNTIF结合的高级用法，最后展示如何利用它制作动态图表。</summary>
-    
-    
-    
-    <category term="IT技术" scheme="https://www.exlink.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="Excel" scheme="https://www.exlink.top/tags/Excel/"/>
-    
-    <category term="FILTER" scheme="https://www.exlink.top/tags/FILTER/"/>
-    
-    <category term="动态图表" scheme="https://www.exlink.top/tags/%E5%8A%A8%E6%80%81%E5%9B%BE%E8%A1%A8/"/>
-    
-    <category term="数据分析" scheme="https://www.exlink.top/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
