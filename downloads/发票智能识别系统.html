@@ -328,14 +328,14 @@
                 
                     <div class="post-date info-break-policy">
                         <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                            2026-03-22
+                            2026-03-23
                     </div>
                     
 
                         
                             <div class="post-date info-break-policy">
                                 <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                                    2026-03-22
+                                    2026-03-23
                             </div>
                             
 
@@ -578,6 +578,8 @@
                 <th>不含税金额</th>
                 <th>税额</th>
                 <th>含税金额(总额)</th>
+                <th>报销人</th>
+                <th>备注</th>
                 <th class="no-export">操作</th>
             </tr>
         </thead>
@@ -841,6 +843,8 @@
             <td contenteditable="true">${data.preTax}</td>
             <td contenteditable="true">${data.tax}</td>
             <td contenteditable="true" style="font-weight:bold; color:#d35400;">${data.total}</td>
+            <td contenteditable="true">${data.reimbursor || ''}</td>
+            <td contenteditable="true">${data.remarks || ''}</td>
             <td class="no-export"><button class="delete-btn" onclick="deleteRow(this)">删除</button></td>
         `;
             tbody.appendChild(tr);
@@ -861,7 +865,9 @@
                     customer: cells[5].innerText.trim(),
                     preTax: cells[6].innerText.trim(),
                     tax: cells[7].innerText.trim(),
-                    total: cells[8].innerText.trim()
+                    total: cells[8].innerText.trim(),
+                    reimbursor: cells.length > 9 ? cells[9].innerText.trim() : '',
+                    remarks: cells.length > 10 ? cells[10].innerText.trim() : ''
                 };
 
                 const hashKey = `${data.invoiceNum}_${data.supplier}_${data.total}`;
@@ -1341,7 +1347,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-03-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-03-23
                             </span>
                         <span class="publish-author">
                             
@@ -1379,7 +1385,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-03-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-03-23
                             </span>
                         <span class="publish-author">
                             
