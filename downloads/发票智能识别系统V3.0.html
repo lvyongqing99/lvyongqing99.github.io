@@ -342,14 +342,14 @@
                                 
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                                            2.5k
+                                            2.7k
                                     </div>
                                     
 
                                         
                                             <div class="info-break-policy">
                                                 <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                                                    13
+                                                    14
                                                         分
                                             </div>
                                             
@@ -371,7 +371,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>智能发票登记系统 (带自动保存)</title>
+    <title>发票智能识别系统V3.0 (带自动保存)</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
@@ -429,6 +429,41 @@
         .clear-btn:hover {
             background-color: #c0392b;
         }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #searchInput {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            outline: none;
+            width: 160px;
+        }
+
+        #searchInput:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        .search-btn {
+            background-color: #f39c12;
+            color: white;
+            padding: 9px 15px;
+        }
+
+        .search-btn:hover {
+            background-color: #d68910;
+        }
+
+        .highlight-row td {
+            background-color: #fffac1 !important;
+            transition: background-color 0.3s;
+        }
         
         .copy-btn {
             background-color: #f39c12;
@@ -469,11 +504,18 @@
             display: none;
         }
 
+        .table-container {
+            max-height: 65vh;
+            overflow-y: auto;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            background: white;
+            border-radius: 4px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             background: white;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         th,
@@ -487,6 +529,19 @@
         th {
             background-color: #34495e;
             color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        /* 避免滚动时原边框透出 */
+        th::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
         }
 
         td[contenteditable="true"] {
@@ -547,7 +602,7 @@
 
 <body>
 
-    <h1>智能发票登记系统</h1>
+    <h1>发票智能识别系统 V3.0</h1>
     
     <div class="safe-notice">
         🔒 <b>纯本地运行安全承诺：</b>本系统采用纯前端技术（浏览器内执行），所有发票数据及图片绝不上传任何云端服务器，彻底杜绝财务数据、公司名称的隐私泄露风险。
@@ -562,29 +617,35 @@
         <button class="copy-btn" onclick="copyAllInvoiceCodes()">📑 一键复制发票代码</button>
         <button class="toggle-privacy-btn" id="privacyBtn" onclick="togglePrivacy()">👁️ 隐藏客户名称</button>
         <button class="clear-btn" onclick="clearAllData()">🗑️ 清空系统数据</button>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索发票尾号...">
+            <button class="search-btn" onclick="searchInvoice()">🔍 查询定位</button>
+        </div>
     </div>
 
     <div class="status" id="statusText">系统初始化中...</div>
 
-    <table id="invoiceTable">
-        <thead>
-            <tr>
-                <th>序号</th>
-                <th>类型</th>
-                <th>发票/票据号码</th>
-                <th>开票日期</th>
-                <th>供应商名称/收款方</th>
-                <th>客户名称/交款人</th>
-                <th>不含税金额</th>
-                <th>税额</th>
-                <th>含税金额(总额)</th>
-                <th>报销人</th>
-                <th>备注</th>
-                <th class="no-export">操作</th>
-            </tr>
-        </thead>
-        <tbody id="tableBody"></tbody>
-    </table>
+    <div class="table-container">
+        <table id="invoiceTable">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>类型</th>
+                    <th>发票/票据号码</th>
+                    <th>开票日期</th>
+                    <th>供应商名称/收款方</th>
+                    <th>客户名称/交款人</th>
+                    <th>不含税金额</th>
+                    <th>税额</th>
+                    <th>含税金额(总额)</th>
+                    <th>报销人</th>
+                    <th>备注</th>
+                    <th class="no-export">操作</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
     <canvas id="hiddenCanvas"></canvas>
 
     <script>
@@ -996,6 +1057,40 @@
                 document.body.removeChild(textArea);
             });
         }
+
+        function searchInvoice() {
+            const keyword = document.getElementById('searchInput').value.trim();
+            if (!keyword) {
+                alert("请输入发票号码进行查询！");
+                return;
+            }
+            
+            const rows = document.getElementById('tableBody').getElementsByTagName('tr');
+            for (let i = 0; i < rows.length; i++) {
+                rows[i].classList.remove('highlight-row');
+            }
+            
+            let found = false;
+            for (let i = 0; i < rows.length; i++) {
+                const invoiceCell = rows[i].cells[2];
+                if (invoiceCell && invoiceCell.innerText.includes(keyword)) {
+                    rows[i].classList.add('highlight-row');
+                    rows[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    found = true;
+                }
+            }
+            
+            if (!found) {
+                alert("未找到包含该号码的发票记录！");
+            }
+        }
+
+        // 监听回车键查询
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                searchInvoice();
+            }
+        });
     </script>
 
 </body>
@@ -1028,7 +1123,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.exlink.top/downloads/%E5%8F%91%E7%A5%A8%E6%99%BA%E8%83%BD%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F.html">https://www.exlink.top/downloads/%E5%8F%91%E7%A5%A8%E6%99%BA%E8%83%BD%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F.html</a>
+                    <a href="https://www.exlink.top/downloads/%E5%8F%91%E7%A5%A8%E6%99%BA%E8%83%BD%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9FV3.0.html">https://www.exlink.top/downloads/%E5%8F%91%E7%A5%A8%E6%99%BA%E8%83%BD%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9FV3.0.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1330,7 +1425,7 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/downloads/%E5%8F%91%E7%A5%A8%E6%99%BA%E8%83%BD%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F.html">
+                <a href="/downloads/%E5%8F%91%E7%A5%A8%E6%99%BA%E8%83%BD%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9FV3.0.html">
                     <div class="card-image">
                         
                         
@@ -1368,7 +1463,7 @@
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/downloads/%E5%8F%91%E7%A5%A8%E6%99%BA%E8%83%BD%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F.html">
+                <a href="/downloads/%E5%8F%91%E7%A5%A8%E6%99%BA%E8%83%BD%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9FV3.0.html">
                     <div class="card-image">
                         
                         
