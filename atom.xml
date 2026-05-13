@@ -6,7 +6,7 @@
   <link href="https://www.exlink.top/atom.xml" rel="self"/>
   
   <link href="https://www.exlink.top/"/>
-  <updated>2026-05-11T15:20:28.777Z</updated>
+  <updated>2026-05-13T12:59:15.009Z</updated>
   <id>https://www.exlink.top/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>4.72亿！龙鱼旗下子公司巨额补税案剖析：一个极易被忽略的计算口径如何引发税务地震？</title>
+    <link href="https://www.exlink.top/2026/05/13/arawana-tax-case-analysis/"/>
+    <id>https://www.exlink.top/2026/05/13/arawana-tax-case-analysis/</id>
+    <published>2026-05-13T13:00:00.000Z</published>
+    <updated>2026-05-13T12:59:15.009Z</updated>
+    
+    <content type="html"><![CDATA[<div align="center">  <img src="/images/arawana_tax_case.png" alt="税务稽查与巨额补税" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);"></div><p>近日，龙鱼（金龙鱼）旗下子公司——<strong>东莞市富之源饲料蛋白开发有限公司</strong>（以下简称“东莞富之源”）的一起税务行政争议案件引发了财税圈的巨大震动。</p><p>根据公告，该公司因在计算“进项税额转出”时存在计算口径偏差，被要求补缴税款、滞纳金以及附加税费，合计金额高达 <strong>4.72 亿元</strong>。这笔巨额补税的背后，仅仅是因为一个会计处理中极易被忽略的“计算口径”问题。</p><p>本文将从基本案情、业务模式、核心争议焦点及法规影响四个维度，系统地为您拆解这一典型案例。</p><hr><h3 id="一、-基本案情：留抵退税“引燃”的十年旧账">一、 基本案情：留抵退税“引燃”的十年旧账</h3><p>案件的起因极具代表性：东莞富之源在申请<strong>增值税留抵退税</strong>时，触发了税务机关的后续追溯核查。</p><p>税务机关在核查中发现，东莞富之源在计算不得抵扣的进项税额（即“进项税额转出”）时，其使用的公式口径与税务机关的理解存在重大偏差。最终，税务局出具了《税务处理决定书》，要求企业补缴 2012 年至 2022 年期间的税款及滞纳金。</p><p>由于金额巨大（合计4.72亿元），该事项直接导致金龙鱼在2025年度计提了相应的预计负债，对年度净利润产生了显著影响。目前，企业已提起行政诉讼，案件正处于二审审理中。</p><h3 id="二、-业务模式：典型的“混产”与进项分摊">二、 业务模式：典型的“混产”与进项分摊</h3><p>要理解为何会产生如此巨额的差错，必须先看东莞富之源的业务逻辑：</p><ol><li><strong>原材料混用</strong>：公司主要从事大豆、菜籽的深加工，采购的原材料（大豆、菜籽）统一进入生产线。</li><li><strong>产品多样化</strong>：生产出的产品既有<strong>应税项目</strong>（如豆油、豆粕），也有<strong>免税项目</strong>（如菜粕，根据《关于饲料产品免征增值税政策的通知》免征增值税）。</li><li><strong>进项税额划分难题</strong>：由于原材料是混用的，生产过程中耗用的水电、辅料等进项税额，很难直接精准对应到具体的应税产品或免税产品上。</li></ol><p>根据我国增值税政策，对于这种**“无法准确划分”**的进项税额，企业必须按照销售比例进行分摊并作“进项税额转出”处理。</p><h3 id="三、-三大核心争议焦点">三、 三大核心争议焦点</h3><p>本案之所以能打到二审，是因为在法理和会计逻辑上存在深刻的冲突。</p><h4 id="1-分子之争：免税销售额是否需要“不含税换算”？">1. 分子之争：免税销售额是否需要“不含税换算”？</h4><p>这是本案最核心的“计算口径”问题。</p><ul><li><strong>企业逻辑</strong>：计算公式为 <code>不得抵扣的进项税额 = 无法划分的进项税额 × (免税销售额 / 合计销售额)</code>。企业认为，分母中的“合计销售额”通常是不含税的，为了逻辑对称，分子中的“免税销售额”也应该按照公式换算成“不含税”口径后再计算。</li><li><strong>税务逻辑</strong>：根据《增值税暂行条例实施细则》第26条，免税货物的销售额就是其实际销售额。由于免税品本身不产生销项税，因此不存在“换算成不含税”的操作，应直接取数。</li><li><strong>结果</strong>：如果分子不进行“不含税”换算，分子会变大，导致计算出的“进项税额转出”金额大幅增加，企业需要补缴更多税款。</li></ul><h4 id="2-追征期之争：10年补税是否合理？">2. 追征期之争：10年补税是否合理？</h4><ul><li><strong>企业观点</strong>：根据《税收征收管理法》第52条，因纳税人计算错误等失误导致的少缴税款，追征期一般为3年，特殊情况可延长至5年。税务局追溯至10年前（2012年）显然超出了法定追征期。</li><li><strong>税务观点</strong>：此案是由留抵退税核查引发。税务机关认为，由于企业一直存在留抵税额，其之前的“计算错误”直到留抵退税发生时才实质性地减少了国库收入，因此追征期应从退税申报时起算，或认定为“不适用普通追征期”的情形。</li></ul><h4 id="3-过错认定：是“核算不实”还是“政策理解分歧”？">3. 过错认定：是“核算不实”还是“政策理解分歧”？</h4><ul><li>本案的争议还在于：这种计算口径的差异，究竟属于企业主观的“申报不实”（可能面临罚款），还是属于对模糊政策的“理解分歧”？</li><li>由于目前案件处于诉讼阶段，滞纳金的计算（每天万分之五）在长达10年的跨度下，已经累积到了一个极其惊人的数字，甚至可能接近或超过税款本金。</li></ul><h3 id="四、-相关法规阐述及其对企业的影响">四、 相关法规阐述及其对企业的影响</h3><h4 id="1-核心法规依据">1. 核心法规依据</h4><ul><li><strong>《增值税暂行条例实施细则》第二十六条</strong>：<blockquote><p>一般纳税人兼营免税项目或者非增值税应税劳务而无法划分不得抵扣的进项税额的，按下列公式计算不得抵扣的进项税额：<br><code>不得抵扣的进项税额 = 当月无法划分的全部进项税额 × 当月免税项目销售额、非增值税应税劳务营业额合计 ÷ 当月全部销售额、营业额合计</code>。</p></blockquote></li><li><strong>《关于出口货物劳务增值税和消费税政策的通知》（财税〔2012〕39号）</strong>：对于包含出口免税在内的复杂口径进行了进一步规定，但在实际操作中，对于“免税销售额”是否需人为剔除“虚拟税额”一直存在灰色地带。</li></ul><h4 id="2-对企业的税务处理启示">2. 对企业的税务处理启示</h4><ul><li><strong>口径的一致性检查</strong>：企业在进行进项税额转出分摊时，必须严格审视公式中分子与分母的口径是否一致。不要理所当然地进行“会计逻辑”上的推导，而要紧扣税法字面含义。</li><li><strong>风险防范与留抵退税</strong>：留抵退税是“真金白银”的政策红利，但也是税务审计的高风险诱发点。在申请大额退税前，企业必须对历史跨度的进项税分摊、成本结转等进行全方位的合规性“健康检查”。</li><li><strong>滞纳金风险预警</strong>：本案再次证明，税务风险具有长期的累积效应。一旦因口径问题导致追征，滞纳金的负担往往会让企业难以承受。</li></ul><hr><blockquote><p>[!IMPORTANT]<br><strong>专家点评</strong>：<br>金龙鱼补税案给所有生产型企业敲响了警钟：在复杂的混产模式下，<strong>哪怕是一个公式里最微小的“取数口径”差异，在长达十年的时间复利下，都可能演变成吞噬企业利润的黑洞。</strong> 税务合规，从来不在于宏大叙事，而在于每一个计算单元的严谨与准确。</p></blockquote><hr><p><strong>版权声明</strong>：本文由“财税知识”栏目特约撰稿。如需转载，请注明出处。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/images/arawana_tax_case.png&quot; alt=&quot;税务稽查与巨额补税&quot; style=&quot;width: 100%; max-width: 800px; border-radius: 12px; bo</summary>
+      
+    
+    
+    
+    <category term="财税知识" scheme="https://www.exlink.top/categories/%E8%B4%A2%E7%A8%8E%E7%9F%A5%E8%AF%86/"/>
+    
+    <category term="案例分析" scheme="https://www.exlink.top/categories/%E8%B4%A2%E7%A8%8E%E7%9F%A5%E8%AF%86/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="增值税" scheme="https://www.exlink.top/tags/%E5%A2%9E%E5%80%BC%E7%A8%8E/"/>
+    
+    <category term="进项税转出" scheme="https://www.exlink.top/tags/%E8%BF%9B%E9%A1%B9%E7%A8%8E%E8%BD%AC%E5%87%BA/"/>
+    
+    <category term="税务合规" scheme="https://www.exlink.top/tags/%E7%A8%8E%E5%8A%A1%E5%90%88%E8%A7%84/"/>
+    
+    <category term="金龙鱼" scheme="https://www.exlink.top/tags/%E9%87%91%E9%BE%99%E9%B1%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>税款滞纳金之辩：当“滞纳金超过本金”成为常态，法律天平该向何处倾斜？</title>
@@ -227,11 +260,11 @@
     <category term="财税知识" scheme="https://www.exlink.top/categories/%E8%B4%A2%E7%A8%8E%E7%9F%A5%E8%AF%86/"/>
     
     
+    <category term="税务合规" scheme="https://www.exlink.top/tags/%E7%A8%8E%E5%8A%A1%E5%90%88%E8%A7%84/"/>
+    
     <category term="资产重组" scheme="https://www.exlink.top/tags/%E8%B5%84%E4%BA%A7%E9%87%8D%E7%BB%84/"/>
     
     <category term="避税分析" scheme="https://www.exlink.top/tags/%E9%81%BF%E7%A8%8E%E5%88%86%E6%9E%90/"/>
-    
-    <category term="税务合规" scheme="https://www.exlink.top/tags/%E7%A8%8E%E5%8A%A1%E5%90%88%E8%A7%84/"/>
     
     <category term="案例剖析" scheme="https://www.exlink.top/tags/%E6%A1%88%E4%BE%8B%E5%89%96%E6%9E%90/"/>
     
@@ -546,9 +579,9 @@
     <category term="财税知识" scheme="https://www.exlink.top/categories/%E8%B4%A2%E7%A8%8E%E7%9F%A5%E8%AF%86/"/>
     
     
-    <category term="增值税" scheme="https://www.exlink.top/tags/%E5%A2%9E%E5%80%BC%E7%A8%8E/"/>
-    
     <category term="2026" scheme="https://www.exlink.top/tags/2026/"/>
+    
+    <category term="增值税" scheme="https://www.exlink.top/tags/%E5%A2%9E%E5%80%BC%E7%A8%8E/"/>
     
     <category term="税务公告" scheme="https://www.exlink.top/tags/%E7%A8%8E%E5%8A%A1%E5%85%AC%E5%91%8A/"/>
     
@@ -617,40 +650,6 @@
     <category term="特朗普" scheme="https://www.exlink.top/tags/%E7%89%B9%E6%9C%97%E6%99%AE/"/>
     
     <category term="宏观经济" scheme="https://www.exlink.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>越湛越永：2026年CMG群众足球决赛冠军争夺战</title>
-    <link href="https://www.exlink.top/2026/01/24/football-final-2026-poster/"/>
-    <id>https://www.exlink.top/2026/01/24/football-final-2026-poster/</id>
-    <published>2026-01-24T01:40:00.000Z</published>
-    <updated>2026-01-24T01:35:43.500Z</updated>
-    
-    <content type="html"><![CDATA[<h1>海报设计方案：越湛越永 - 足球决赛</h1><p><img src="/images/football_final_poster_2026.png" alt="足球决赛海报"></p><h2 id="🏆-冠军总决赛：决战绿茵">🏆 冠军总决赛：决战绿茵</h2><p><strong>赛事名称</strong>：CMG群众足球运动<br><strong>对阵双方</strong>：🔴 <strong>湖南永州队</strong> VS 🔵 <strong>广东湛江队</strong></p><hr><h3 id="🔥-主题词：越湛越永">🔥 主题词：越湛越永</h3><p><strong>(寓意：球艺越来越精湛，友谊永远长存；由于“湛”与“战”谐音，也寓意越战越勇)</strong></p><h3 id="📢-宣传语：粤湘老幺，同台献技">📢 宣传语：粤湘老幺，同台献技</h3><p><strong>(寓意：广东与湖南的兄弟情谊，年轻力量同台切磋)</strong></p><hr><h3 id="📅-比赛时间">📅 比赛时间</h3><p><strong>2026年1月24日 17:30</strong></p><h3 id="📍-比赛性质">📍 比赛性质</h3><p><strong>巅峰对决 · 冠军争夺</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;海报设计方案：越湛越永 - 足球决赛&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/images/football_final_poster_2026.png&quot; alt=&quot;足球决赛海报&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;🏆-冠军总决赛：决战绿茵&quot;&gt;🏆 冠军总决赛：决战绿茵&lt;/h2&gt;</summary>
-      
-    
-    
-    
-    <category term="经济新闻" scheme="https://www.exlink.top/categories/%E7%BB%8F%E6%B5%8E%E6%96%B0%E9%97%BB/"/>
-    
-    
-    <category term="足球" scheme="https://www.exlink.top/tags/%E8%B6%B3%E7%90%83/"/>
-    
-    <category term="CMG" scheme="https://www.exlink.top/tags/CMG/"/>
-    
-    <category term="决赛" scheme="https://www.exlink.top/tags/%E5%86%B3%E8%B5%9B/"/>
-    
-    <category term="湖南" scheme="https://www.exlink.top/tags/%E6%B9%96%E5%8D%97/"/>
-    
-    <category term="广东" scheme="https://www.exlink.top/tags/%E5%B9%BF%E4%B8%9C/"/>
     
   </entry>
   
