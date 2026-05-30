@@ -376,7 +376,7 @@
                                 
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                                            3k
+                                            3.1k
                                     </div>
                                     
 
@@ -688,64 +688,88 @@
 <h3 id="1-等额本金的公式拆解">1. 等额本金的公式拆解</h3>
 <p>等额本金的特征是“本金均摊，利息按余款计算”。</p>
 <ul>
-<li>设贷款本金为 $P$，总期数为 $N$，月利率为 $R$，当前还款期数为 $i$（$1 \le i \le N$）。</li>
+<li>设贷款本金为 <strong><em>P</em></strong>，总期数为 <strong><em>N</em></strong>，月利率为 <strong><em>R</em></strong>，当前还款期数为 <strong><em>i</em></strong>（1 ≤ <strong><em>i</em></strong> ≤ <strong><em>N</em></strong>）。</li>
 </ul>
-<h4 id="1-每期归还本金-Pr">(1) 每期归还本金 ($Pr$)</h4>
-<p>$$Pr = \frac{P}{N}$$<br>
-由于是均摊，每期还款本金固定不变。在案例中为 $500,000 / 12 \approx 41,666.67$ 元。</p>
-<h4 id="2-第-i-期应还利息-I-i">(2) 第 $i$ 期应还利息 ($I_i$)</h4>
-<p>利息仅对“尚未归还的本金余额”计息。第 $i$ 期初的本金余额为 $P - (i - 1) \times Pr$。<br>
-$$I_i = [P - (i - 1) \times Pr] \times R$$</p>
-<h4 id="3-第-i-期本息合计（月供-A-i-）">(3) 第 $i$ 期本息合计（月供 $A_i$）</h4>
-<p>$$A_i = Pr + I_i = \frac{P}{N} + \left[ P - (i - 1) \times \frac{P}{N} \right] \times R$$</p>
-<h4 id="4-月供每期递减额-D">(4) 月供每期递减额 ($D$)</h4>
-<p>因为每期本金固定，期末本金等量减少，所以下一期的利息也等量减少。递减额为：<br>
-$$D = A_i - A_{i+1} = Pr \times R = \frac{P}{N} \times R$$<br>
-在本例中，每月递减额度为：$41,666.67 \times (4% / 12) \approx 138.89$ 元。<br>
+<h4 id="1-每期归还本金-Pr">(1) 每期归还本金 (<strong><em>Pr</em></strong>)</h4>
+<blockquote>
+<p><strong>每期归还本金 (Pr) = 贷款本金 (P) / 总期数 (N)</strong></p>
+</blockquote>
+<p>由于是均摊，每期还款本金固定不变。在案例中为 <code>500,000 / 12 ≈ 41,666.67</code> 元。</p>
+<h4 id="2-第-i-期应还利息-Ii">(2) 第 <strong><em>i</em></strong> 期应还利息 (<strong><em>Ii</em></strong>)</h4>
+<p>利息仅对“尚未归还的本金余额”计息。第 <strong><em>i</em></strong> 期初的本金余额为 <code>P - (i - 1) × Pr</code>。</p>
+<blockquote>
+<p><strong>第 i 期应还利息 (Ii) = [ 贷款本金 (P) - (i - 1) × 每期本金 (Pr) ] × 月利率 ®</strong></p>
+</blockquote>
+<h4 id="3-第-i-期本息合计（月供-Ai）">(3) 第 <strong><em>i</em></strong> 期本息合计（月供 <strong><em>Ai</em></strong>）</h4>
+<blockquote>
+<p><strong>月供 (Ai) = 每期本金 (Pr) + 第 i 期利息 (Ii) = P / N + [ P - (i - 1) × (P / N) ] × R</strong></p>
+</blockquote>
+<h4 id="4-月供每期递减额-D">(4) 月供每期递减额 (<strong><em>D</em></strong>)</h4>
+<p>因为每期本金固定，期末本金等量减少，所以下一期的利息也等量减少。递减额为：</p>
+<blockquote>
+<p><strong>每月递减额 (D) = 每期本金 (Pr) × 月利率 ® = (P / N) × R</strong></p>
+</blockquote>
+<p>在本例中，每月递减额度为：<code>41,666.67 × (4% / 12) ≈ 138.89</code> 元。<br>
 <em>验证</em>：第1期月供为 43,333.34 元，第2期为 43,194.45 元，差额恰好为 138.89 元。</p>
-<h4 id="5-总利息支出-Total-I">(5) 总利息支出 ($Total_I$)</h4>
-<p>利息支出构成首项为 $P \times R$、末项为 $Pr \times R$、公差为 $-D$ 的等差数列。其求和公式为：<br>
-$$Total_I = \frac{(N + 1) \times P \times R}{2}$$<br>
-在案例中：$Total_I = \frac{13 \times 500,000 \times (4% / 12)}{2} = 10,833.33$ 元。</p>
+<h4 id="5-总利息支出-Total-I">(5) 总利息支出 (<strong><em>Total_I</em></strong>)</h4>
+<p>利息支出构成首期利息为 <code>P × R</code>，最后一期为 <code>Pr × R</code>，公差为 <code>-D</code> 的等差数列。其求和公式为：</p>
+<blockquote>
+<p><strong>总利息 (Total_I) = [ (N + 1) × P × R ] / 2</strong></p>
+</blockquote>
+<p>在案例中：<code>Total_I = [ (12 + 1) × 500,000 × (4% / 12) ] / 2 = 10,833.33</code> 元。</p>
 <hr>
 <h3 id="2-等额本息的公式拆解">2. 等额本息的公式拆解</h3>
-<p>等额本息的特征是“每期还款总额固定”，其数学本质是<strong>资金的资金时间价值（折现）</strong>。</p>
-<h4 id="1-月供公式推导（等比数列求和）">(1) 月供公式推导（等比数列求和）</h4>
-<p>设每期本息合计为固定的月供 $A$。根据货币的时间价值，每一期还款 $A$ 折现到现在的总价值必须等于贷款本金 $P$：<br>
-$$P = \frac{A}{1+R} + \frac{A}{(1+R)^2} + \dots + \frac{A}{(1+R)^N}$$<br>
-这是一个等比数列求和问题，公比为 $\frac{1}{1+R}$。化简后可解出月供 $A$ 的公式：<br>
-$$A = P \times \frac{R(1+R)^N}{(1+R)^N - 1}$$<br>
-将案例数据代入：<br>
-$$A = 500,000 \times \frac{\frac{0.04}{12}\left(1 + \frac{0.04}{12}\right)^{12}}{\left(1 + \frac{0.04}{12}\right)^{12} - 1} \approx 42,574.95 \text{ 元}$$</p>
+<p>等额本息的特征是“每期还款总额固定”，其数学本质是<strong>资金的时间价值（折现模型）</strong>。</p>
+<h4 id="1-月供公式推导（等比数列折现模型）">(1) 月供公式推导（等比数列折现模型）</h4>
+<p>设每期本息合计为固定的月供 <strong><em>A</em></strong>。根据货币的时间价值，每一期还款 <strong><em>A</em></strong> 折现到当前的价值总和，必须等于贷款本金 <strong><em>P</em></strong>：</p>
+<blockquote>
+<p><strong>P = A / (1 + R)¹ + A / (1 + R)² + … + A / (1 + R)ᴺ</strong></p>
+</blockquote>
+<p>这是一个等比数列求和问题，公比为 <code>1 / (1 + R)</code>。通过化简后，可解出月供 <strong><em>A</em></strong> 的通用公式：</p>
+<blockquote>
+<p><strong>A = P × [ R × (1 + R)ᴺ ] / [ (1 + R)ᴺ - 1 ]</strong></p>
+</blockquote>
+<p><em>(注：其中 (1 + R)ᴺ 表示 (1 + R) 的 N 次方)</em></p>
+<p>将本案例的数据代入公式：</p>
+<ul>
+<li><strong>P</strong> = 500,000</li>
+<li><strong>R</strong> = 4.00% / 12 = 0.00333333</li>
+<li><strong>N</strong> = 12</li>
+</ul>
+<blockquote>
+<p><strong>A = 500,000 × [ 0.00333333 × (1 + 0.00333333)¹² ] / [ (1 + 0.00333333)¹² - 1 ] ≈ 42,574.95 元</strong></p>
+</blockquote>
 <h4 id="2-Excel-中的计算函数">(2) Excel 中的计算函数</h4>
-<p>在 Excel 中，我们不需要手动输入上述复杂的公式，可以直接使用财务函数：</p>
+<p>在 Excel 中，我们不需要手动输入上述复杂的代数公式，可以直接使用财务函数：</p>
 <ul>
 <li>
-<p><strong>计算月供 (PMT)</strong>：<br>
+<p><strong>计算每期月供 (PMT)</strong>：<br>
 <code>=PMT(每期利率, 总期数, -本金)</code><br>
 本例公式：<code>=PMT(4%/12, 12, -500000)</code>，计算结果为 <strong>42,574.95</strong>。</p>
 </li>
 <li>
-<p><strong>计算第 $i$ 期月供中的利息部分 (IPMT)</strong>：<br>
+<p><strong>计算第 <em>i</em> 期月供中的利息部分 (IPMT)</strong>：<br>
 <code>=IPMT(每期利率, 当前期数, 总期数, -本金)</code><br>
 例如第 2 期利息：<code>=IPMT(4%/12, 2, 12, -500000)</code>，结果为 <strong>1,530.31</strong>。</p>
 </li>
 <li>
-<p><strong>计算第 $i$ 期月供中的本金部分 (PPMT)</strong>：<br>
+<p><strong>计算第 <em>i</em> 期月供中的本金部分 (PPMT)</strong>：<br>
 <code>=PPMT(每期利率, 当前期数, 总期数, -本金)</code><br>
 例如第 2 期本金：<code>=PPMT(4%/12, 2, 12, -500000)</code>，结果为 <strong>41,044.64</strong>。</p>
 </li>
 </ul>
 <blockquote>
-<p><strong>公式关系</strong>：在 Excel 中，任一期数的 <code>=IPMT() + PPMT()</code> 必定等于固定的 <code>=PMT()</code>。</p>
+<p><strong>公式关系</strong>：在 Excel 中，任一期数的 <code>=IPMT() + PPMT()</code> 结果必定等于当期固定的 <code>=PMT()</code>。</p>
 </blockquote>
 <h4 id="3-关键实战细节：最后一期的“尾差调整”">(3) 关键实战细节：最后一期的“尾差调整”</h4>
 <p>由于计算中存在四舍五入（保留两位小数），如果最后一期仍严格执行公式，将导致期末本金无法完全归零。<br>
-在等额本息表格第 12 期中，期初本金余额为 <strong>42,433.54 元</strong>，当期利息为 $42,433.54 \times (4% / 12) = 141.45$ 元。<br>
-为了结清贷款，最后一期的还本金额必须直接等于期初余额（<strong>42,433.54 元</strong>）。<br>
-因此，最后一期的实际本息合计调整为：<br>
-$$\text{最后一期本息合计} = \text{期初本金} + \text{当期利息} = 42,433.54 + 141.45 = 42,574.99 \text{ 元}$$<br>
-<em>(注：根据银行系统和Excel截位方式的微小差异，舍入误差会在最后一期进行结清调整，如本例中调整为 42,574.97 元)</em>。</p>
+在等额本息表格第 12 期中，期初本金余额为 <strong>42,433.54 元</strong>，当期折算利息为 <code>42,433.54 × (4.00% / 12) = 141.45</code> 元。<br>
+为了完全结清贷款，最后一期的应归还本金直接指定等于上期期末本金余额（<strong>42,433.54 元</strong>）。<br>
+Lock最后一期的实际本息合计调整为：</p>
+<blockquote>
+<p><strong>最后一期本息合计 = 期初本金 + 当期利息 = 42,433.54 + 141.45 = 42,574.99 元</strong></p>
+</blockquote>
+<p><em>(注：根据银行系统和 Excel 截位方式的微小差异，舍入误差会在最后一期进行结清调整，如本例中调整为 42,574.97 元)</em>。</p>
 <hr>
 <h2 id="三、-等额本金-vs-等额本息：全方位多维度对比">三、 等额本金 vs 等额本息：全方位多维度对比</h2>
 <p>我们不能脱离还款期限和生活实际来谈优劣。下表汇总了两者的核心差异：</p>
