@@ -792,11 +792,88 @@ $$\text{最后一期本息合计} = \text{期初本金} + \text{当期利息} = 
 </tbody>
 </table>
 <h3 id="1-结构化本息对比示意图">1. 结构化本息对比示意图</h3>
-<p>以下 Mermaid 图表直观展示了两种方式下每月还款本息结构的演变趋势：</p>
-<div class="carousel">
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">gantt</span><br><span class="line">    title 等额本金（月供逐月递减，本金固定）</span><br><span class="line">    dateFormat  X</span><br><span class="line">    axisFormat %d</span><br><span class="line">    </span><br><span class="line">    section 第1期(月供43333)</span><br><span class="line">    本金41667 :active, 0, 41667</span><br><span class="line">    利息1666  :crit, 41667, 43333</span><br><span class="line">    </span><br><span class="line">    section 第6期(月供42638)</span><br><span class="line">    本金41667 :active, 0, 41667</span><br><span class="line">    利息972   :crit, 41667, 42639</span><br><span class="line">    </span><br><span class="line">    section 第12期(月供41805)</span><br><span class="line">    本金41666 :active, 0, 41666</span><br><span class="line">    利息139   :crit, 41666, 41805</span><br></pre></td></tr></table></figure>
-<!-- slide -->
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">gantt</span><br><span class="line">    title 等额本息（月供固定，利息占比递减）</span><br><span class="line">    dateFormat  X</span><br><span class="line">    axisFormat %d</span><br><span class="line">    </span><br><span class="line">    section 第1期(月供42575)</span><br><span class="line">    本金40908 :active, 0, 40908</span><br><span class="line">    利息1667  :crit, 40908, 42575</span><br><span class="line">    </span><br><span class="line">    section 第6期(月供42575)</span><br><span class="line">    本金41594 :active, 0, 41594</span><br><span class="line">    利息980   :crit, 41594, 42575</span><br><span class="line">    </span><br><span class="line">    section 第12期(月供42575)</span><br><span class="line">    本本42433 :active, 0, 42433</span><br><span class="line">    利息141   :crit, 42433, 42575</span><br></pre></td></tr></table></figure>
+<p>以下直观展示了两种还款方式在首期、中期和末期的本金与利息占比结构变化：</p>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; margin: 25px 0;">
+  <!-- 等额本金卡片 -->
+  <div style="flex: 1; min-width: 300px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+    <h4 style="margin: 0 0 15px 0; color: #0f766e; font-size: 16px; border-bottom: 2px solid #0f766e; padding-bottom: 8px; display: flex; justify-content: space-between;">
+      <span>等额本金（月供逐月递减）</span>
+      <span style="font-size: 12px; background: #ccfbf1; color: #0f766e; padding: 2px 8px; border-radius: 9999px;">本金固定</span>
+    </h4>
+    <!-- 第1期 -->
+    <div style="margin-bottom: 12px;">
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #4b5563; margin-bottom: 4px;">
+        <span><strong>第 1 期</strong> (月供: 43,333.34 元)</span>
+        <span>利息占比: 3.85%</span>
+      </div>
+      <div style="display: flex; height: 26px; border-radius: 6px; overflow: hidden; font-size: 11px; color: white; text-align: center; line-height: 26px; font-weight: bold; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="width: 96.15%; background: #0f766e;">本金 41,666.67</div>
+        <div style="width: 3.85%; background: #f59e0b; min-width: 45px;">利息 1666.67</div>
+      </div>
+    </div>
+    <!-- 第6期 -->
+    <div style="margin-bottom: 12px;">
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #4b5563; margin-bottom: 4px;">
+        <span><strong>第 6 期</strong> (月供: 42,638.89 元)</span>
+        <span>利息占比: 2.28%</span>
+      </div>
+      <div style="display: flex; height: 26px; border-radius: 6px; overflow: hidden; font-size: 11px; color: white; text-align: center; line-height: 26px; font-weight: bold; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="width: 97.72%; background: #0f766e;">本金 41,666.67</div>
+        <div style="width: 2.28%; background: #f59e0b; min-width: 45px;">利息 972.22</div>
+      </div>
+    </div>
+    <!-- 第12期 -->
+    <div>
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #4b5563; margin-bottom: 4px;">
+        <span><strong>第 12 期</strong> (月供: 41,805.52 元)</span>
+        <span>利息占比: 0.33%</span>
+      </div>
+      <div style="display: flex; height: 26px; border-radius: 6px; overflow: hidden; font-size: 11px; color: white; text-align: center; line-height: 26px; font-weight: bold; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="width: 99.67%; background: #0f766e;">本金 41,666.63</div>
+        <div style="width: 0.33%; background: #f59e0b; min-width: 45px;">利息 138.89</div>
+      </div>
+    </div>
+  </div>
+  <!-- 等额本息卡片 -->
+  <div style="flex: 1; min-width: 300px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+    <h4 style="margin: 0 0 15px 0; color: #0284c7; font-size: 16px; border-bottom: 2px solid #0284c7; padding-bottom: 8px; display: flex; justify-content: space-between;">
+      <span>等额本息（月供固定不变）</span>
+      <span style="font-size: 12px; background: #e0f2fe; color: #0284c7; padding: 2px 8px; border-radius: 9999px;">月供固定</span>
+    </h4>
+    <!-- 第1期 -->
+    <div style="margin-bottom: 12px;">
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #4b5563; margin-bottom: 4px;">
+        <span><strong>第 1 期</strong> (月供: 42,574.95 元)</span>
+        <span>利息占比: 3.92%</span>
+      </div>
+      <div style="display: flex; height: 26px; border-radius: 6px; overflow: hidden; font-size: 11px; color: white; text-align: center; line-height: 26px; font-weight: bold; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="width: 96.08%; background: #0284c7;">本金 40,908.28</div>
+        <div style="width: 3.92%; background: #f59e0b; min-width: 45px;">利息 1666.67</div>
+      </div>
+    </div>
+    <!-- 第6期 -->
+    <div style="margin-bottom: 12px;">
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #4b5563; margin-bottom: 4px;">
+        <span><strong>第 6 期</strong> (月供: 42,574.95 元)</span>
+        <span>利息占比: 2.30%</span>
+      </div>
+      <div style="display: flex; height: 26px; border-radius: 6px; overflow: hidden; font-size: 11px; color: white; text-align: center; line-height: 26px; font-weight: bold; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="width: 97.70%; background: #0284c7;">本金 41,594.65</div>
+        <div style="width: 2.30%; background: #f59e0b; min-width: 45px;">利息 980.30</div>
+      </div>
+    </div>
+    <!-- 第12期 -->
+    <div>
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #4b5563; margin-bottom: 4px;">
+        <span><strong>第 12 期</strong> (月供: 42,574.97 元)</span>
+        <span>利息占比: 0.33%</span>
+      </div>
+      <div style="display: flex; height: 26px; border-radius: 6px; overflow: hidden; font-size: 11px; color: white; text-align: center; line-height: 26px; font-weight: bold; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="width: 99.67%; background: #0284c7;">本金 42,433.54</div>
+        <div style="width: 0.33%; background: #f59e0b; min-width: 45px;">利息 141.45</div>
+      </div>
+    </div>
+  </div>
 </div>
 <h3 id="2-长期贷款（如30年房贷）下的“放大效应”">2. 长期贷款（如30年房贷）下的“放大效应”</h3>
 <p>在本次 1 年期 50 万元的短期分析中，等额本金只比等额本息少还了 <strong>66.11 元</strong> 的利息。这常让人误以为两者相差无几。<br>
