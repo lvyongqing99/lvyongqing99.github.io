@@ -8,7 +8,8 @@
     <meta name="description" content="用VBA开发系统界面，由于VBA的二次开发功能，使得一些小工具非常好地助于工作和学习。这是通过VBA开发的系统进入界面，如下图所示：
 
 所有的原代码如下：
-123456789101112131415161718192021222324252">
+Private Sub CommandButton3_Click()
+    Dim">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -372,7 +373,7 @@
                                 
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                                            276
+                                            239
                                     </div>
                                     
 
@@ -390,6 +391,9 @@
         <hr class="clearfix">
 
         
+            <!-- 是否加载使用自带的 prismjs. -->
+            <link rel="stylesheet" href="/libs/prism/prism.min.css">
+            
 
                 
 
@@ -398,7 +402,36 @@
                                 <p>用VBA开发系统界面，由于VBA的二次开发功能，使得一些小工具非常好地助于工作和学习。这是通过VBA开发的系统进入界面，如下图所示：</p>
 <p><img src="/images/vba-login-ui.png" alt="VBA登陆窗口"></p>
 <p>所有的原代码如下：</p>
-<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> CommandButton3_Click()</span><br><span class="line">    <span class="keyword">Dim</span> a <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">    <span class="keyword">Dim</span> b <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">    <span class="keyword">Dim</span> c <span class="keyword">As</span> Range</span><br><span class="line">    a = 登陆窗口.ComboBox1.<span class="keyword">Text</span></span><br><span class="line">    b = 登陆窗口.TextBox1.<span class="keyword">Text</span></span><br><span class="line"><span class="comment">&#x27;    With sheet9</span></span><br><span class="line">    <span class="keyword">Set</span> c = ThisWorkbook.Worksheets(<span class="string">&quot;user&quot;</span>).[a:b].Find(a, , , <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">If</span> a = <span class="string">&quot;&quot;</span> <span class="built_in">Or</span> b = <span class="string">&quot;&quot;</span> <span class="keyword">Then</span></span><br><span class="line">      MsgBox (<span class="string">&quot;用户名或密码不能为空!&quot;</span>), vbInformation, <span class="string">&quot;薪酬管理系统&quot;</span></span><br><span class="line">        <span class="keyword">Else</span></span><br><span class="line">          <span class="keyword">If</span> <span class="built_in">Not</span> c <span class="built_in">Is</span> <span class="literal">Nothing</span> <span class="keyword">Then</span></span><br><span class="line">             <span class="keyword">If</span> c.Offset(<span class="number">0</span>, <span class="number">1</span>).<span class="keyword">Text</span> = b <span class="keyword">Then</span></span><br><span class="line">                MsgBox (<span class="string">&quot;欢迎进入系统！&quot;</span>), vbInformation, <span class="string">&quot;薪酬管理系统&quot;</span></span><br><span class="line">    <span class="keyword">Dim</span> MainForm <span class="keyword">As</span> Worksheet <span class="comment">&#x27;定义主界面</span></span><br><span class="line">    <span class="keyword">Set</span> MainForm = ThisWorkbook.Worksheets(<span class="string">&quot;主界面&quot;</span>)</span><br><span class="line">    MainForm.Range(<span class="string">&quot;d10&quot;</span>) = a</span><br><span class="line">    ThisWorkbook.Worksheets(<span class="string">&quot;user&quot;</span>).Range(<span class="string">&quot;c2&quot;</span>) = a</span><br><span class="line">    ThisWorkbook.Worksheets(<span class="string">&quot;user&quot;</span>).Range(<span class="string">&quot;d2&quot;</span>) = b</span><br><span class="line">    Unload <span class="keyword">Me</span></span><br><span class="line">    Application.Visible = <span class="literal">True</span></span><br><span class="line">    ThisWorkbook.Worksheets(<span class="string">&quot;user&quot;</span>).Visible = xlSheetVeryHidden <span class="comment">&#x27;需要定义xlSheetVeryHidden的值</span></span><br><span class="line">         <span class="keyword">Else</span></span><br><span class="line">          MsgBox (<span class="string">&quot;密码错误，请重新输入...&quot;</span>), vbInformation, <span class="string">&quot;薪酬管理系统&quot;&quot;&quot;</span></span><br><span class="line">            登陆窗口.TextBox1.SetFocus</span><br><span class="line">   <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">         <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">            <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">            界面</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-visual-basic" data-language="visual-basic"><code class="language-visual-basic"><span class="token keyword">Private</span> <span class="token keyword">Sub</span> CommandButton3_Click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">Dim</span> a <span class="token keyword">As</span> <span class="token keyword">String</span>
+    <span class="token keyword">Dim</span> b <span class="token keyword">As</span> <span class="token keyword">String</span>
+    <span class="token keyword">Dim</span> c <span class="token keyword">As</span> Range
+    a <span class="token operator">=</span> 登陆窗口<span class="token punctuation">.</span>ComboBox1<span class="token punctuation">.</span>Text
+    b <span class="token operator">=</span> 登陆窗口<span class="token punctuation">.</span>TextBox1<span class="token punctuation">.</span>Text
+<span class="token comment">'    With sheet9</span>
+    <span class="token keyword">Set</span> c <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Worksheets<span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>[a<span class="token punctuation">:</span>b]<span class="token punctuation">.</span>Find<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token punctuation">,</span> <span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">If</span> a <span class="token operator">=</span> <span class="token string">""</span> <span class="token keyword">Or</span> b <span class="token operator">=</span> <span class="token string">""</span> <span class="token keyword">Then</span>
+      MsgBox <span class="token punctuation">(</span><span class="token string">"用户名或密码不能为空!"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> vbInformation<span class="token punctuation">,</span> <span class="token string">"薪酬管理系统"</span>
+        <span class="token keyword">Else</span>
+          <span class="token keyword">If</span> <span class="token keyword">Not</span> c <span class="token keyword">Is</span> <span class="token boolean">Nothing</span> <span class="token keyword">Then</span>
+             <span class="token keyword">If</span> c<span class="token punctuation">.</span>Offset<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Text <span class="token operator">=</span> b <span class="token keyword">Then</span>
+                MsgBox <span class="token punctuation">(</span><span class="token string">"欢迎进入系统！"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> vbInformation<span class="token punctuation">,</span> <span class="token string">"薪酬管理系统"</span>
+    <span class="token keyword">Dim</span> MainForm <span class="token keyword">As</span> Worksheet <span class="token comment">'定义主界面</span>
+    <span class="token keyword">Set</span> MainForm <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Worksheets<span class="token punctuation">(</span><span class="token string">"主界面"</span><span class="token punctuation">)</span>
+    MainForm<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"d10"</span><span class="token punctuation">)</span> <span class="token operator">=</span> a
+    ThisWorkbook<span class="token punctuation">.</span>Worksheets<span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"c2"</span><span class="token punctuation">)</span> <span class="token operator">=</span> a
+    ThisWorkbook<span class="token punctuation">.</span>Worksheets<span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"d2"</span><span class="token punctuation">)</span> <span class="token operator">=</span> b
+    Unload <span class="token keyword">Me</span>
+    Application<span class="token punctuation">.</span>Visible <span class="token operator">=</span> <span class="token boolean">True</span>
+    ThisWorkbook<span class="token punctuation">.</span>Worksheets<span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Visible <span class="token operator">=</span> xlSheetVeryHidden <span class="token comment">'需要定义xlSheetVeryHidden的值</span>
+         <span class="token keyword">Else</span>
+          MsgBox <span class="token punctuation">(</span><span class="token string">"密码错误，请重新输入..."</span><span class="token punctuation">)</span><span class="token punctuation">,</span> vbInformation<span class="token punctuation">,</span> <span class="token string">"薪酬管理系统"""</span>
+            登陆窗口<span class="token punctuation">.</span>TextBox1<span class="token punctuation">.</span>SetFocus
+   <span class="token keyword">End</span> <span class="token keyword">If</span>
+         <span class="token keyword">End</span> <span class="token keyword">If</span>
+            <span class="token keyword">End</span> <span class="token keyword">If</span>
+            界面
+<span class="token keyword">End</span> <span class="token keyword">Sub</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                                     
                             </div>
@@ -869,6 +902,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -1041,7 +1077,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">58.3k</span>
+                        class="white-color">58.2k</span>
             
             
             
@@ -1242,7 +1278,7 @@ $(function () {
                                     src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
                                 <script src="/js/matery.js"></script>
 
-                                
+                                                               
                                     <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
                                     <script
                                         src='/libs/mermaid/mermaid.min.js'></script>

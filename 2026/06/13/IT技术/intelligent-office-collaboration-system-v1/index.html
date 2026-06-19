@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="《智能办公协同系统 V1.0》：业财融合与 AI 赋能的轻量级企业数字化转型实践, 心联科技">
-    <meta name="description" content="在当今瞬息万变的市场环境中，中小型企业正面临着数字化的**“三岔路口”**：
+    <meta name="description" content="在当今瞬息万变的市场环境中，中小型企业正面临着数字化的“三岔路口”：
 
-向左走（大型 ERP）：使用市面上成套的 ERP 系统。然而，这类系统往往部署繁琐、授权与实施成本高昂，且企业自身的业务流程与 ERP 预设的“标准模板”存在难">
+向左走（大型 ERP）：使用市面上成套的 ERP 系统。然而，这类系统往往部署繁琐、授权与实施成本高昂，且企业自身的业务流程与 ERP 预设的“标准模板”存在难以弥合的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -376,7 +376,7 @@
                         
                             <div class="post-date info-break-policy">
                                 <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                                    2026-06-13
+                                    2026-06-19
                             </div>
                             
 
@@ -401,24 +401,35 @@
         <hr class="clearfix">
 
         
+            <!-- 是否加载使用自带的 prismjs. -->
+            <link rel="stylesheet" href="/libs/prism/prism.min.css">
+            
 
                 
 
                         <div class="card-content article-card-content">
                             <div id="articleContent">
-                                <p>在当今瞬息万变的市场环境中，中小型企业正面临着数字化的**“三岔路口”**：</p>
+                                <p>在当今瞬息万变的市场环境中，中小型企业正面临着数字化的“<strong>三岔路口</strong>”：</p>
 <ol>
-<li><strong>向左走（大型 ERP）</strong>：使用市面上成套的 ERP 系统。然而，这类系统往往部署繁琐、授权与实施成本高昂，且企业自身的业务流程与 ERP 预设的“标准模板”存在难以弥合的鸿沟，面临着**“业务跟不上、实施落不了地”**的双重不确定性。</li>
+<li><strong>向左走（大型 ERP）</strong>：使用市面上成套的 ERP 系统。然而，这类系统往往部署繁琐、授权与实施成本高昂，且企业自身的业务流程与 ERP 预设的“标准模板”存在难以弥合的鸿沟，面临着“<strong>业务跟不上、实施落不了地</strong>”的双重不确定性。</li>
 <li><strong>向右走（Excel + 共享盘）</strong>：依靠简单的 Excel 记录。虽然灵活，但一旦面临多端协同、精细化权限控制、财务审计与流程规范化要求时，Excel 就会瞬间捉襟见肘，沦为“信息孤岛”。</li>
-<li><strong>向前走（自主研发）</strong>：想要根据自身痛点定制系统，却又不得不面对**“业务骨干不懂 IT 编程，IT 人员不懂业务业财逻辑”**的尴尬境地。</li>
+<li><strong>向前走（自主研发）</strong>：想要根据自身痛点定制系统，却又不得不面对“<strong>业务骨干不懂 IT 编程，IT 人员不懂业务业财逻辑</strong>”的尴尬境地。</li>
 </ol>
 <p>突破这一技术鸿沟的转机，正是如今<strong>日趋成熟的 AI 辅助编程</strong>。它让深耕业务与财务融合的非专业程序员，也能够凭借清晰的业务逻辑，在 AI 的帮助下跨越技术门槛，打造出媲美专业软件的系统。</p>
-<p>作为一名深耕业财融合的行业专家，本人曾在企业实际业务中长期使用 Excel VBA 维系日常的协同运转。针对 VBA 难于多端共享、交互落后等痛点，我通过 AI 赋能，将原有的 Excel 业务逻辑彻底重构重组，开发了这套**《智能办公协同系统 V1.0》（代号：ReceiptServer）**。</p>
+<p>作为一名深耕业财融合的行业专家，本人曾在企业实际业务中长期使用 Excel VBA 维系日常的协同运转。针对 VBA 难于多端共享、交互落后等痛点，我通过 AI 赋能，将原有的 Excel 业务逻辑彻底重构重组，开发了这套《<strong>智能办公协同系统 V1.0</strong>》（代号：ReceiptServer）。</p>
 <p>本文将从系统的<strong>架构、技术、原理、可操作性与安全性</strong>五个维度，用通俗易懂的语言系统地阐述本套系统的设计精髓，并为中小企业进行小系统自研提供一些诚恳的建议。</p>
 <hr>
 <h2 id="一、-系统架构：为什么是-Go-React-SQLite？">一、 系统架构：为什么是 Go + React + SQLite？</h2>
-<p>在摆脱 Excel VBA 的局限后，本系统在架构设计上追求**“高内聚、轻量化、易运维”<strong>。我们没有盲目追求大厂的微服务或分布式架构，而是采用了一种能实现</strong>“单兵作战、一键部署”**的经典铁三角技术栈：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    User((客户端浏览器)) &lt;--&gt;|HTTP/JSON| Gin[Go Gin Web 服务端]</span><br><span class="line">    subgraph ReceiptServer.exe 独立程序</span><br><span class="line">        Gin &lt;--&gt;|GORM| SQLite[(SQLite 数据库文件)]</span><br><span class="line">        EmbeddedFront[go:embed 嵌入式 React 前端静态资源] --&gt;|编译时注入| Gin</span><br><span class="line">    end</span><br></pre></td></tr></table></figure>
+<p>在摆脱 Excel VBA 的局限后，本系统在架构设计上追求“<strong>高内聚、轻量化、易运维</strong>”。我们没有盲目追求大厂的微服务或分布式架构，而是采用了一种能实现“<strong>单兵作战、一键部署</strong>”的经典铁三角技术栈：</p>
+<div class="mermaid">
+  graph TD
+    User((客户端浏览器)) <-->|HTTP/JSON| Gin[Go Gin Web 服务端]
+    subgraph ReceiptServer.exe 独立程序
+        Gin <-->|GORM| SQLite[(SQLite 数据库文件)]
+        EmbeddedFront[go:embed 嵌入式 React 前端静态资源] -->|编译时注入| Gin
+    end
+</div>
+
 <h3 id="1-后端：Go-语言-Gin-框架">1. 后端：Go 语言 &amp; Gin 框架</h3>
 <p>Go 语言（Golang）因其出色的并发处理能力、极小的运行内存和极快的编译速度而闻名。Gin 则是 Go 生态中最成熟的轻量级 Web 框架。使用 Go 作为后端，意味着我们能够用几十兆的内存开销，撑起几十上百人局域网内的高并发访问，告别了 Java 动辄几百兆甚至上 G 的内存吞噬。</p>
 <h3 id="2-前端：React-19-Vite-8">2. 前端：React 19 &amp; Vite 8</h3>
@@ -485,7 +496,7 @@
 <h3 id="3-部署架构必须“极简”">3. 部署架构必须“极简”</h3>
 <p>避免一上来就接触 Kubernetes、Docker 集群、微服务等高深概念。对于中小企业，过度架构是自研项目夭折的头号元凶。</p>
 <ul>
-<li><strong>建议</strong>：优先采用像本项目一样的 <strong>“单文件部署 + 嵌入式 SQLite 数据库”</strong>。这种架构没有外部依赖，对服务器性能要求极低，即便是一个不懂技术的主管，也能双击 exe 把它跑起来，试错和运维成本极低。</li>
+<li><strong>建议</strong>：优先采用像本项目一样的 “<strong>单文件部署 + 嵌入式 SQLite 数据库</strong>”。这种架构没有外部依赖，对服务器性能要求极低，即便是一个不懂技术的主管，也能双击 exe 把它跑起来，试错和运维成本极低。</li>
 </ul>
 <h3 id="4-安全和备份是系统的生命线">4. 安全和备份是系统的生命线</h3>
 <p>自己做的小系统，最容易忽略安全和灾备。</p>
@@ -993,6 +1004,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -1165,7 +1179,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">58.3k</span>
+                        class="white-color">58.2k</span>
             
             
             
@@ -1366,7 +1380,7 @@ $(function () {
                                     src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
                                 <script src="/js/matery.js"></script>
 
-                                
+                                                               
                                     <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
                                     <script
                                         src='/libs/mermaid/mermaid.min.js'></script>

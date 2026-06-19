@@ -375,7 +375,7 @@
                                 
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                                            926
+                                            930
                                     </div>
                                     
 
@@ -393,6 +393,9 @@
         <hr class="clearfix">
 
         
+            <!-- 是否加载使用自带的 prismjs. -->
+            <link rel="stylesheet" href="/libs/prism/prism.min.css">
+            
 
                 
 
@@ -405,7 +408,7 @@
 <p>这是FILTER函数最基础也最常用的功能。假设我们有一份销售数据，想要快速提取出“东部”地区的所有记录。</p>
 <p><strong>语法</strong>：<code>=FILTER(数组, 条件, [空值返回])</code></p>
 <p><strong>公式示例</strong>：</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">FILTER</span>(<span class="symbol">A2</span>:<span class="symbol">C20</span>, <span class="symbol">B2</span>:<span class="symbol">B20</span>=<span class="string">&quot;东部&quot;</span>, <span class="string">&quot;无数据&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-excel" data-language="excel"><code class="language-excel">&#x3D;FILTER(A2:C20, B2:B20&#x3D;&quot;东部&quot;, &quot;无数据&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>只需在一个单元格输入公式，所有符合条件的数据就会自动“溢出”填充到相邻单元格中，无需手动下拉复制。如果源数据发生变化，筛选结果也会自动更新。</p>
 <p><img src="/images/excel-filter-basic.png" alt="单条件筛选示例"></p>
 <h2 id="2-多条件批量查找：AND与OR的逻辑魅力">2. 多条件批量查找：AND与OR的逻辑魅力</h2>
@@ -415,16 +418,16 @@
 <li><strong>“或”关系（任意满足）</strong>：使用加号 <code>+</code> 连接条件。</li>
 </ul>
 <p><strong>场景一</strong>：筛选“东部”地区<strong>且</strong>销售额大于10000的记录。</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">FILTER</span>(<span class="symbol">A2</span>:<span class="symbol">C20</span>, (<span class="symbol">B2</span>:<span class="symbol">B20</span>=<span class="string">&quot;东部&quot;</span>) * (<span class="symbol">C2</span>:<span class="symbol">C20</span>&gt;<span class="number">10000</span>))</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-excel" data-language="excel"><code class="language-excel">&#x3D;FILTER(A2:C20, (B2:B20&#x3D;&quot;东部&quot;) * (C2:C20&gt;10000))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong>场景二</strong>：筛选“东部”地区<strong>或</strong>“北部”地区的记录。</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">FILTER</span>(<span class="symbol">A2</span>:<span class="symbol">C20</span>, (<span class="symbol">B2</span>:<span class="symbol">B20</span>=<span class="string">&quot;东部&quot;</span>) + (<span class="symbol">B2</span>:<span class="symbol">B20</span>=<span class="string">&quot;北部&quot;</span>))</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-excel" data-language="excel"><code class="language-excel">&#x3D;FILTER(A2:C20, (B2:B20&#x3D;&quot;东部&quot;) + (B2:B20&#x3D;&quot;北部&quot;))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>逻辑清晰，一目了然，再也不用嵌套无数层的IF函数了。</p>
 <p><img src="/images/excel-filter-multi-condition.png" alt="多条件筛选逻辑"></p>
 <h2 id="3-进阶：与COUNTIF组合（列表筛选）">3. 进阶：与COUNTIF组合（列表筛选）</h2>
 <p>如果我们需要筛选的条件不是一个固定的值，而是一个“列表”呢？比如，只要是“指定名单”中的客户，就全部筛选出来。这时候，FILTER与COUNTIF简直是天作之合。</p>
 <p><strong>思路</strong>：利用COUNTIF判断源数据中的每一项是否存在于“指定名单”中，如果存在返回1（True），不存在返回0（False），以此作为FILTER的筛选条件。</p>
 <p><strong>公式示例</strong>：</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">FILTER</span>(<span class="symbol">A2</span>:<span class="symbol">C20</span>, <span class="built_in">COUNTIF</span>(<span class="symbol">E2</span>:<span class="symbol">E5</span>, <span class="symbol">A2</span>:<span class="symbol">A20</span>))</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-excel" data-language="excel"><code class="language-excel">&#x3D;FILTER(A2:C20, COUNTIF(E2:E5, A2:A20))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><em>注：E2:E5为指定的客户名单区域，A2:A20为源数据中的客户列。</em></p>
 <p>这个组合技在核对数据、提取特定群体信息时效率极高。</p>
 <p><img src="/images/excel-filter-countif.png" alt="FILTER与COUNTIF组合"></p>
@@ -919,6 +922,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -1091,7 +1097,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">58.3k</span>
+                        class="white-color">58.2k</span>
             
             
             
@@ -1292,7 +1298,7 @@ $(function () {
                                     src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
                                 <script src="/js/matery.js"></script>
 
-                                
+                                                               
                                     <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
                                     <script
                                         src='/libs/mermaid/mermaid.min.js'></script>

@@ -393,6 +393,9 @@
         <hr class="clearfix">
 
         
+            <!-- 是否加载使用自带的 prismjs. -->
+            <link rel="stylesheet" href="/libs/prism/prism.min.css">
+            
 
                 
 
@@ -549,7 +552,13 @@
 <li><strong>参照适用</strong>：调整方法参照企业所得税反避税实践，包括可比非受控价格法等转让定价方法。</li>
 </ol>
 <p><strong>（三）哪些业务模式面临高风险？</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">⚠️ 高风险业务模式清单（需主动进行合规审查）</span><br><span class="line"></span><br><span class="line">✗ 通过注册于低税负区域的关联公司承接业务，再向最终客户销售</span><br><span class="line">✗ 将不动产销售拆分为&quot;房屋租赁+装修服务&quot;绕过不动产销售税率</span><br><span class="line">✗ 在跨期交易中人为推迟开票时点，错配纳税义务发生时间</span><br><span class="line">✗ 以&quot;借款&quot;名义收取实质上为价款的资金，规避增值税义务</span><br><span class="line">✗ 关联方之间设立无实质内容的管理咨询合同，虚增进项抵扣</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">⚠️ 高风险业务模式清单（需主动进行合规审查）
+
+✗ 通过注册于低税负区域的关联公司承接业务，再向最终客户销售
+✗ 将不动产销售拆分为&quot;房屋租赁+装修服务&quot;绕过不动产销售税率
+✗ 在跨期交易中人为推迟开票时点，错配纳税义务发生时间
+✗ 以&quot;借款&quot;名义收取实质上为价款的资金，规避增值税义务
+✗ 关联方之间设立无实质内容的管理咨询合同，虚增进项抵扣<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p><strong>实务建议</strong>：企业在设计业务架构时，应为每一个税务安排准备&quot;合理商业目的备忘录&quot;（Business Purpose Memo），从商业逻辑、市场对价、决策过程三个维度记录交易的非税动机，以备税务核查时举证之需。</p>
 </blockquote>
@@ -567,7 +576,14 @@
 <p>《实施条例》第26条构建了&quot;月度预划分 + 次年1月年度汇总清算&quot;的双轨机制：</p>
 <p>$$\text{全年不得抵扣进项税额} = \text{全年不可划分进项税额} \times \frac{\text{全年免税销售额}}{\text{全年全部销售额}}$$</p>
 <p><strong>操作流程</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">每月                  →    按预计比例，月度进行进项划分</span><br><span class="line">                            （预划分比例 = 上一年度末比例 or 预计全年比例）</span><br><span class="line"></span><br><span class="line">次年1月申报期前       →    汇总全年应税/免税销售额，</span><br><span class="line">                            按上述公式计算全年应转出进项税额总额</span><br><span class="line"></span><br><span class="line">次年1月申报期         →    将月度已转出合计与全年应转出总额进行差额补充，</span><br><span class="line">                            一次性完成年度清算，多退少补</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">每月                  →    按预计比例，月度进行进项划分
+                            （预划分比例 &#x3D; 上一年度末比例 or 预计全年比例）
+
+次年1月申报期前       →    汇总全年应税&#x2F;免税销售额，
+                            按上述公式计算全年应转出进项税额总额
+
+次年1月申报期         →    将月度已转出合计与全年应转出总额进行差额补充，
+                            一次性完成年度清算，多退少补<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>（三）对企业财务管理的深层影响</strong></p>
 <table>
 <thead>
@@ -1135,6 +1151,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -1307,7 +1326,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">58.3k</span>
+                        class="white-color">58.2k</span>
             
             
             
@@ -1508,7 +1527,7 @@ $(function () {
                                     src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
                                 <script src="/js/matery.js"></script>
 
-                                
+                                                               
                                     <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
                                     <script
                                         src='/libs/mermaid/mermaid.min.js'></script>

@@ -370,7 +370,7 @@
                                 
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                                            709
+                                            711
                                     </div>
                                     
 
@@ -388,6 +388,9 @@
         <hr class="clearfix">
 
         
+            <!-- 是否加载使用自带的 prismjs. -->
+            <link rel="stylesheet" href="/libs/prism/prism.min.css">
+            
 
                 
 
@@ -397,7 +400,7 @@
 <p>在 Excel 365 中，微软推出了一个旨在替代 VLOOKUP、HLOOKUP 和 INDEX+MATCH 的全新函数——<strong>XLOOKUP</strong>。它不仅解决了 VLOOKUP 的诸多痛点（如只能向右查找、列号容易出错等），还增加了强大的新功能。本篇专栏将带你深入了解 XLOOKUP 的强大之处。</p>
 <h2 id="1-函数语法">1. 函数语法</h2>
 <p>XLOOKUP 的语法非常直观，参数虽然多，但常用的只有前三个：</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">XLOOKUP</span>(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-excel" data-language="excel"><code class="language-excel">&#x3D;XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li><strong>lookup_value</strong>: 你要查找的内容（比如学号、姓名）。</li>
 <li><strong>lookup_array</strong>: 查找范围（在哪一列查找）。</li>
@@ -412,7 +415,7 @@
 <h3 id="2-1-逆向查找-Look-Left">2.1 逆向查找 (Look Left)</h3>
 <p>传统的 VLOOKUP 只能查找 lookup_value 右侧的数据。如果你的查找列在结果列的右边（比如根据“姓名”查左边的“工号”），XLOOKUP 可以轻松搞定，因为它的查找列和结果列是分开的参数。</p>
 <p><strong>公式示例：</strong></p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">XLOOKUP</span>(<span class="symbol">F2</span>, <span class="symbol">B:B</span>, <span class="symbol">A:A</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-excel" data-language="excel"><code class="language-excel">&#x3D;XLOOKUP(F2, B:B, A:A)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li><code>F2</code>: 要查找的姓名。</li>
 <li><code>B:B</code>: 姓名所在的列（查找列）。</li>
@@ -422,7 +425,7 @@
 <p>在过去，多条件查找通常需要用到数组公式或者辅助列。XLOOKUP 支持利用布尔逻辑直接连接条件。</p>
 <p><strong>场景</strong>：同时满足“部门为销售部”且“职级为经理”的员工。</p>
 <p><strong>公式示例：</strong></p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">XLOOKUP</span>(<span class="number">1</span>, (<span class="symbol">A2</span>:<span class="symbol">A10</span>=<span class="string">&quot;销售部&quot;</span>)*(<span class="symbol">B2</span>:<span class="symbol">B10</span>=<span class="string">&quot;经理&quot;</span>), <span class="symbol">C2</span>:<span class="symbol">C10</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-excel" data-language="excel"><code class="language-excel">&#x3D;XLOOKUP(1, (A2:A10&#x3D;&quot;销售部&quot;)*(B2:B10&#x3D;&quot;经理&quot;), C2:C10)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong>原理</strong>：</p>
 <ul>
 <li><code>(A2:A10=&quot;销售部&quot;)</code> 生成一组 0 和 1。</li>
@@ -433,7 +436,7 @@
 <h3 id="2-3-批量查找-一次返回多列">2.3 批量查找 (一次返回多列)</h3>
 <p>XLOOKUP 可以一次性返回多列数据（溢出数组）。</p>
 <p><strong>公式示例：</strong></p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">XLOOKUP</span>(<span class="symbol">A2</span>, <span class="symbol">A:A</span>, <span class="symbol">B:D</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-excel" data-language="excel"><code class="language-excel">&#x3D;XLOOKUP(A2, A:A, B:D)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>如果 <code>B:D</code> 包含了“姓名”、“年龄”、“职位”三列，公式回车后，这三列数据会同时显示出来，无需拖拽。</li>
 </ul>
@@ -441,7 +444,7 @@
 <p>有时我们需要查找<strong>最后一次</strong>出现的记录（例如某产品的最新报价）。XLOOKUP 的第 6 个参数可以设定搜索方向。</p>
 <p><img src="/images/xlookup-reverse.png" alt="逆序查找"></p>
 <p><strong>公式示例：</strong></p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">XLOOKUP</span>(<span class="symbol">A2</span>, <span class="symbol">B:B</span>, <span class="symbol">C:C</span>, , <span class="number">0</span>, -<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-excel" data-language="excel"><code class="language-excel">&#x3D;XLOOKUP(A2, B:B, C:C, , 0, -1)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>最后那个 <code>-1</code> 代表<strong>从下往上</strong>（From Last to First）搜索。</li>
 </ul>
@@ -916,6 +919,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -1088,7 +1094,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">58.3k</span>
+                        class="white-color">58.2k</span>
             
             
             
@@ -1289,7 +1295,7 @@ $(function () {
                                     src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
                                 <script src="/js/matery.js"></script>
 
-                                
+                                                               
                                     <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
                                     <script
                                         src='/libs/mermaid/mermaid.min.js'></script>

@@ -9,7 +9,9 @@
 
 代码实现
 原代码如下：
-123456789101112131415161718192021222">
+Sub 万元()
+   Dim rng As Range
+    Dim">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -373,7 +375,7 @@
                                 
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                                            235
+                                            223
                                     </div>
                                     
 
@@ -391,6 +393,9 @@
         <hr class="clearfix">
 
         
+            <!-- 是否加载使用自带的 prismjs. -->
+            <link rel="stylesheet" href="/libs/prism/prism.min.css">
+            
 
                 
 
@@ -400,7 +405,32 @@
 <p><img src="/images/vba_excel_wanyuan.png" alt="Excel VBA万元转换"></p>
 <h3 id="代码实现">代码实现</h3>
 <p>原代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">Sub 万元()</span><br><span class="line">   Dim rng As Range</span><br><span class="line">    Dim cel As Range</span><br><span class="line">    On Error GoTo ErrorHandler</span><br><span class="line">  </span><br><span class="line">    &#x27; 允许用户选择转换单位的区域</span><br><span class="line">    Set rng = Application.InputBox(&quot;请选择转换单位的区域:&quot;, &quot;提示:&quot;, Type:=8)</span><br><span class="line">  </span><br><span class="line">    &#x27; 检查用户是否取消操作</span><br><span class="line">    If rng Is Nothing Then</span><br><span class="line">        MsgBox &quot;未选择任何区域，操作已取消。&quot;, vbInformation</span><br><span class="line">        Exit Sub</span><br><span class="line">    End If</span><br><span class="line">  </span><br><span class="line">    &#x27; 遍历选定区域中的每个单元格</span><br><span class="line">    For Each cel In rng</span><br><span class="line">        &#x27; 将值除以10000并保留两位小数</span><br><span class="line">        cel.Value = Round(cel.Value / 10000, 2)</span><br><span class="line">    Next cel</span><br><span class="line">  </span><br><span class="line">    Exit Sub</span><br><span class="line">  </span><br><span class="line">ErrorHandler:</span><br><span class="line">    &#x27; 如果发生错误（如用户选择了一个图表而非单元格区域）</span><br><span class="line">    MsgBox &quot;发生错误: &quot; &amp; Err.Description, vbCritical</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-visual-basic" data-language="visual-basic"><code class="language-visual-basic"><span class="token keyword">Sub</span> 万元<span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token keyword">Dim</span> rng <span class="token keyword">As</span> Range
+    <span class="token keyword">Dim</span> cel <span class="token keyword">As</span> Range
+    <span class="token keyword">On</span> <span class="token keyword">Error</span> <span class="token keyword">GoTo</span> ErrorHandler
+  
+    <span class="token comment">' 允许用户选择转换单位的区域</span>
+    <span class="token keyword">Set</span> rng <span class="token operator">=</span> Application<span class="token punctuation">.</span>InputBox<span class="token punctuation">(</span><span class="token string">"请选择转换单位的区域:"</span><span class="token punctuation">,</span> <span class="token string">"提示:"</span><span class="token punctuation">,</span> <span class="token keyword">Type</span><span class="token punctuation">:</span><span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">)</span>
+  
+    <span class="token comment">' 检查用户是否取消操作</span>
+    <span class="token keyword">If</span> rng <span class="token keyword">Is</span> <span class="token boolean">Nothing</span> <span class="token keyword">Then</span>
+        MsgBox <span class="token string">"未选择任何区域，操作已取消。"</span><span class="token punctuation">,</span> vbInformation
+        <span class="token keyword">Exit</span> <span class="token keyword">Sub</span>
+    <span class="token keyword">End</span> <span class="token keyword">If</span>
+  
+    <span class="token comment">' 遍历选定区域中的每个单元格</span>
+    <span class="token keyword">For</span> <span class="token keyword">Each</span> cel <span class="token keyword">In</span> rng
+        <span class="token comment">' 将值除以10000并保留两位小数</span>
+        cel<span class="token punctuation">.</span>Value <span class="token operator">=</span> Round<span class="token punctuation">(</span>cel<span class="token punctuation">.</span>Value <span class="token operator">/</span> <span class="token number">10000</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token keyword">Next</span> cel
+  
+    <span class="token keyword">Exit</span> <span class="token keyword">Sub</span>
+  
+ErrorHandler<span class="token punctuation">:</span>
+    <span class="token comment">' 如果发生错误（如用户选择了一个图表而非单元格区域）</span>
+    MsgBox <span class="token string">"发生错误: "</span> <span class="token operator">&amp;</span> Err<span class="token punctuation">.</span>Description<span class="token punctuation">,</span> vbCritical
+<span class="token keyword">End</span> <span class="token keyword">Sub</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                                     
                             </div>
@@ -873,6 +903,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -1045,7 +1078,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">58.3k</span>
+                        class="white-color">58.2k</span>
             
             
             
@@ -1246,7 +1279,7 @@ $(function () {
                                     src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
                                 <script src="/js/matery.js"></script>
 
-                                
+                                                               
                                     <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
                                     <script
                                         src='/libs/mermaid/mermaid.min.js'></script>

@@ -394,6 +394,9 @@
         <hr class="clearfix">
 
         
+            <!-- 是否加载使用自带的 prismjs. -->
+            <link rel="stylesheet" href="/libs/prism/prism.min.css">
+            
 
                 
 
@@ -415,7 +418,7 @@
 <h3 id="案例一：按销售额降序排列">案例一：按销售额降序排列</h3>
 <p>假设我们有一份销售表，包含“姓名”、“部门”、“销售额”。现在需要根据“销售额”从高到低排序。</p>
 <p><strong>公式</strong>：</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">SORT</span>(<span class="symbol">A2</span>:<span class="symbol">C20</span>, <span class="number">3</span>, -<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-excel" data-language="excel"><code class="language-excel">&#x3D;SORT(A2:C20, 3, -1)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li><code>A2:C20</code>：源数据区域。</li>
 <li><code>3</code>：依据第3列（销售额）排序。</li>
@@ -426,7 +429,7 @@
 <p>现实中我们常遇到这样的需求：先按“部门”升序排列，如果部门相同，再按“销售额”降序排列。</p>
 <p>在SORT函数中，我们可以通过<strong>数组常量</strong>来实现多条件排序。</p>
 <p><strong>公式</strong>：</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=<span class="built_in">SORT</span>(<span class="symbol">A2</span>:<span class="symbol">C20</span>, &#123;<span class="number">2</span>, <span class="number">3</span>&#125;, &#123;<span class="number">1</span>, -<span class="number">1</span>&#125;)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-excel" data-language="excel"><code class="language-excel">&#x3D;SORT(A2:C20, &#123;2, 3&#125;, &#123;1, -1&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li><code>{2, 3}</code>：表示先按第2列（部门）排序，再按第3列（销售额）排序。</li>
 <li><code>{1, -1}</code>：对应前面的排序列，第2列按升序（1），第3列按降序（-1）。</li>
@@ -937,6 +940,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -1109,7 +1115,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">58.3k</span>
+                        class="white-color">58.2k</span>
             
             
             
@@ -1310,7 +1316,7 @@ $(function () {
                                     src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
                                 <script src="/js/matery.js"></script>
 
-                                
+                                                               
                                     <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
                                     <script
                                         src='/libs/mermaid/mermaid.min.js'></script>
