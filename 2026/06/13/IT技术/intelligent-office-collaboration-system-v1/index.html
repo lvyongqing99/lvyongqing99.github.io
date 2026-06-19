@@ -450,7 +450,7 @@
 <h3 id="1-动态多主体（多租户）独立运行原理">1. 动态多主体（多租户）独立运行原理</h3>
 <p>在集团化或关联企业管理中，往往有多家公司共用一套系统的需求。如果给每个公司都单独配一套服务器，不仅成本高昂，维护也是灾难。</p>
 <ul>
-<li><strong>工作原理</strong>：系统读取外部的 <code>config.json</code> 配置文件。主程序在启动时，会为配置文件中的每个公司（如“磐龙科创”、“好帮手知行”）在内存中初始化一个独立的“运行时实例”（<code>CompanyInstance</code>）。</li>
+<li><strong>工作原理</strong>：系统读取外部的 <code>config.json</code> 配置文件。主程序在启动时，会为配置文件中的每个公司（如“A公司”、“B公司”）在内存中初始化一个独立的“运行时实例”（<code>CompanyInstance</code>）。</li>
 <li><strong>资源隔离</strong>：每个实例独占一个端口监听（例如 <code>19150</code> 和 <code>19151</code>），并挂载各自的 SQLite 数据库文件（如 <code>data_company1.db</code>）。从网络端口到本地数据，实现了纯物理级别的多主体隔离，互不干扰。</li>
 </ul>
 <h3 id="2-局域网自适应与免配置网络放行">2. 局域网自适应与免配置网络放行</h3>
@@ -822,13 +822,13 @@
                             <img id="wechat-qr" src="/medias/reward/weixin.jpg" class="reward-img" alt="微信打赏二维码">
                         </div>
                         <p style="color: #e74c3c; font-size: 14px; margin-top: 10px; text-align: center;">
-                            <button onclick="switchReward('6')"
-                                class="waves-effect waves-light btn-small red">6元</button>
+                            <button onclick="switchReward('2')"
+                                class="waves-effect waves-light btn-small red">2元</button>
                         </p>
                         <script>
                             function switchReward(amount) {
                                 var img = document.getElementById('wechat-qr');
-                                if (amount === '6') {
+                                if (amount === '2') {
                                     img.src = "/medias/reward/weixin.jpg";
                                 }
                             }
