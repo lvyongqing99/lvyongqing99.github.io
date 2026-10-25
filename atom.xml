@@ -6,7 +6,7 @@
   <link href="https://www.exlink.top/atom.xml" rel="self"/>
   
   <link href="https://www.exlink.top/"/>
-  <updated>2026-06-19T04:02:12.210Z</updated>
+  <updated>2026-10-25T13:24:42.058Z</updated>
   <id>https://www.exlink.top/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DeepSeek断网，八方支援：众志成城83小时保卫战——雷倩评大陆网安企业协同御敌</title>
+    <link href="https://www.exlink.top/2026/10/25/IT%E6%8A%80%E6%9C%AF/deepseek-83-hours-cyber-defense/"/>
+    <id>https://www.exlink.top/2026/10/25/IT%E6%8A%80%E6%9C%AF/deepseek-83-hours-cyber-defense/</id>
+    <published>2026-10-25T13:30:00.000Z</published>
+    <updated>2026-10-25T13:24:42.058Z</updated>
+    
+    <content type="html"><![CDATA[<h1>DeepSeek断网，八方支援：众志成城83小时保卫战</h1><p>2025年春节前后，来自杭州的大模型公司 <strong>DeepSeek（深度求索）</strong> 凭借 DeepSeek-R1 横空出世，登顶多国应用商店下载榜，美股科技板块一度剧烈震荡，英伟达单日市值蒸发近6000亿美元。然而就在“高光时刻”，一场针对 DeepSeek 的大规模网络攻击也悄然升级，服务一度中断、新用户注册被迫限制。随后，国内多家网络安全企业、云服务商与运营商协同驰援，舆论将这段攻防称为 <strong>“83小时保卫战”</strong>。</p><h2 id="一、事件经过：攻击如何层层加码">一、事件经过：攻击如何层层加码</h2><p>根据奇安信 XLab 实验室等安全机构披露的监测数据，攻击大致呈现以下脉络：</p><table><thead><tr><th>时间</th><th>关键事件</th></tr></thead><tbody><tr><td>2025年1月初</td><td>监测到针对 DeepSeek 的 DDoS 攻击开始出现，以 NTP 反射、Memcached 反射等手法为主</td></tr><tr><td>1月20日前后</td><td>R1 模型发布、热度飙升，攻击频次与流量同步上升</td></tr><tr><td>1月27日</td><td>DeepSeek 官网发布公告：线上服务“遭受大规模恶意攻击”，暂时限制非中国大陆手机号注册</td></tr><tr><td>1月28日</td><td>攻击明显升级，除 DDoS 外出现大量 HTTP 代理攻击、暴力破解等，攻击源 IP 大量来自境外，其中以美国为主</td></tr><tr><td>1月30日</td><td>攻击再度加码，HailBot、RapperBot 等僵尸网络家族加入，攻击指令数量相比此前暴增上百倍</td></tr></tbody></table><p>这一阶段，DeepSeek 的 API 与网页服务多次出现“服务器繁忙”、响应缓慢甚至短时不可用，大量用户直观感受到了“断网”。</p><blockquote><p>[!NOTE]<br>攻击手法从“流量型”的反射放大攻击，逐步演进到“应用层”的 HTTP 代理攻击与账号暴力破解，再到职业化僵尸网络下场，具有明显的组织性和持续性特征。</p></blockquote><h2 id="二、八方支援：国内网安力量协同驰援">二、八方支援：国内网安力量协同驰援</h2><p>面对持续数日的高强度攻击，国内网安与基础设施力量的“协同作战”成为舆论焦点：</p><ol><li><strong>威胁情报共享</strong>：奇安信 XLab 等机构持续跟踪攻击态势，公开披露攻击手法、僵尸网络家族与攻击源分布，为防御方提供了第一手情报。</li><li><strong>安全厂商主动驰援</strong>：据多方报道，360 等安全企业公开表态愿意提供技术支持，周鸿祎曾公开喊话“360愿意全力支持 DeepSeek”。</li><li><strong>云与算力平台接力</strong>：华为云、阿里云、腾讯云、百度智能云、火山引擎等国内主流云平台在随后短时间内相继上线 DeepSeek 模型服务，客观上分流了海量访问请求，降低了单点压力。</li><li><strong>流量清洗与网络侧防护</strong>：运营商级别的流量清洗、高防节点调度等能力，为抵御大流量 DDoS 提供了“底座”支撑。</li></ol><p>经过约 83 小时的连续攻防，DeepSeek 服务逐步恢复稳定，“众志成城”“八方支援”成为网络上的高频词。</p><blockquote><p>[!WARNING]<br>需要客观指出的是：“83小时保卫战”这一说法主要源自自媒体与网络舆论的归纳，部分细节（例如某些企业介入的具体程度、“国家队下场”等说法）并未得到 DeepSeek 或相关企业的官方确认，业内也有声音认为其中存在一定的艺术加工成分。本文对未经证实的部分已作审慎表述。</p></blockquote><h2 id="三、雷倩评论：大陆网安体系“平时竞争、战时协同”">三、雷倩评论：大陆网安体系“平时竞争、战时协同”</h2><p>台湾知名时事评论人、前“立法委员”<strong>雷倩</strong>，长期在两岸政论节目中关注中美科技竞争。围绕 DeepSeek 的崛起及其遭受攻击一事，她在节目中的主要观点可归纳为以下几个层面（以下为观点梳理，非逐字引述）：</p><h3 id="1-攻击本身就是对-DeepSeek-实力的“反向认证”">1. 攻击本身就是对 DeepSeek 实力的“反向认证”</h3><p>雷倩认为，一个新兴 AI 产品在爆红的同时遭遇高度组织化的攻击，本身说明它触动了既有格局。DeepSeek 以极低训练成本实现接近顶尖模型的能力，动摇了“堆算力、堆资本才能做大模型”的叙事，也冲击了美国科技巨头的估值逻辑。</p><h3 id="2-协同防御体现的是体系能力，而非单一企业能力">2. 协同防御体现的是体系能力，而非单一企业能力</h3><p>她特别关注大陆网安企业、云厂商在此次事件中的表现：这些公司在商业上本是激烈竞争的对手，但在面对外部攻击时能够迅速共享情报、提供资源、分担流量。在她看来，这种“平时竞争、战时协同”的模式，反映的是大陆数字基础设施的整体韧性和动员能力。</p><h3 id="3-开源路线放大了“众人拾柴”的效应">3. 开源路线放大了“众人拾柴”的效应</h3><p>DeepSeek 选择开源模型权重，使得各家云平台能够在极短时间内完成部署上线。雷倩指出，开源让“保卫 DeepSeek”从一家公司的事情，变成了整个产业生态都能参与的事情——这也是开源生态对闭源巨头形成冲击的重要原因。</p><h3 id="4-对台湾的启示">4. 对台湾的启示</h3><p>作为台湾评论人，雷倩也借此事反思台湾的处境：在 AI 与网络安全领域，单靠个别企业难以应对国家级、组织化的攻击，产业协同、情报共享与基础设施自主同样关键。</p><h2 id="四、事件启示">四、事件启示</h2><p>从技术和产业角度看，这场“保卫战”留下了几点值得深思的经验：</p><ul><li><strong>AI 服务已成为关键数字基础设施</strong>：大模型服务一旦成为现象级应用，就天然成为攻击目标，安全必须与产品同步规划。</li><li><strong>防御需要“纵深 + 协同”</strong>：从运营商流量清洗、云高防，到应用层 WAF、账号风控，任何单一环节都难以独立扛住复合型攻击。</li><li><strong>威胁情报共享价值凸显</strong>：XLab 等机构的公开披露，让攻击手法透明化，有助于全行业快速形成防御共识。</li><li><strong>开源与多云部署提升韧性</strong>：模型开源 + 多云分发，客观上形成了“去中心化”的服务能力，降低了单点被打瘫的风险。</li></ul><h2 id="结语">结语</h2><p>DeepSeek 的这段经历，既是中国 AI 企业走向全球舞台的“成人礼”，也是一次对国内网络安全体系的实战检验。无论“83小时”的具体细节如何被讲述，攻击确实发生、防御确实奏效、服务最终恢复——这才是事件最核心的事实。正如雷倩所言，真正的竞争力不仅在于做出好模型，更在于背后整个产业体系能否在关键时刻“托得住”。</p><hr><p><em>参考来源：奇安信 XLab 攻击监测报告、DeepSeek 官方服务公告、新浪科技、知乎相关讨论及雷倩相关政论节目内容。</em></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;DeepSeek断网，八方支援：众志成城83小时保卫战&lt;/h1&gt;
+&lt;p&gt;2025年春节前后，来自杭州的大模型公司 &lt;strong&gt;DeepSeek（深度求索）&lt;/strong&gt; 凭借 DeepSeek-R1 横空出世，登顶多国应用商店下载榜，美股科技板块一度剧烈震荡，英伟</summary>
+      
+    
+    
+    
+    <category term="IT技术" scheme="https://www.exlink.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="DeepSeek" scheme="https://www.exlink.top/tags/DeepSeek/"/>
+    
+    <category term="人工智能" scheme="https://www.exlink.top/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="网络安全" scheme="https://www.exlink.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    <category term="DDoS" scheme="https://www.exlink.top/tags/DDoS/"/>
+    
+    <category term="雷倩" scheme="https://www.exlink.top/tags/%E9%9B%B7%E5%80%A9/"/>
+    
+  </entry>
   
   <entry>
     <title>《智能办公协同系统 V1.0》：业财融合与 AI 赋能的轻量级企业数字化转型实践</title>
@@ -173,13 +206,13 @@
     <category term="案例分析" scheme="https://www.exlink.top/categories/%E8%B4%A2%E7%A8%8E%E7%9F%A5%E8%AF%86/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/"/>
     
     
+    <category term="增值税" scheme="https://www.exlink.top/tags/%E5%A2%9E%E5%80%BC%E7%A8%8E/"/>
+    
     <category term="进项税转出" scheme="https://www.exlink.top/tags/%E8%BF%9B%E9%A1%B9%E7%A8%8E%E8%BD%AC%E5%87%BA/"/>
     
     <category term="税务合规" scheme="https://www.exlink.top/tags/%E7%A8%8E%E5%8A%A1%E5%90%88%E8%A7%84/"/>
     
     <category term="金龙鱼" scheme="https://www.exlink.top/tags/%E9%87%91%E9%BE%99%E9%B1%BC/"/>
-    
-    <category term="增值税" scheme="https://www.exlink.top/tags/%E5%A2%9E%E5%80%BC%E7%A8%8E/"/>
     
   </entry>
   
@@ -627,38 +660,6 @@
     <category term="人才" scheme="https://www.exlink.top/tags/%E4%BA%BA%E6%89%8D/"/>
     
     <category term="AI转型" scheme="https://www.exlink.top/tags/AI%E8%BD%AC%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>软件已死？Anthropic发布AI法务插件引发3000亿美金大崩盘</title>
-    <link href="https://www.exlink.top/2026/02/04/anthropic-ai-legal-plugin/"/>
-    <id>https://www.exlink.top/2026/02/04/anthropic-ai-legal-plugin/</id>
-    <published>2026-02-04T14:56:55.000Z</published>
-    <updated>2026-02-04T14:57:59.757Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/anthropic_ai_legal_crash.png" alt="软件已死"></p><h2 id="软件行业的“至暗时刻”">软件行业的“至暗时刻”</h2><p>就在刚刚，华尔街经历了一场惊心动魄的“黑色时刻”。随着Anthropic正式发布其革命性的<strong>AI法务插件</strong>，整个软件板块在短短数小时内市值蒸发超过<strong>3000亿美元</strong>。这一事件不仅是资本市场的震荡，更被科技界惊呼为：“<strong>软件已死</strong>”论调的再一次现实印证。</p><p>投资者恐慌性抛售SaaS公司股票，因为市场普遍认为，传统的软件服务模式在高度智能化的AI Agent面前，正变得岌岌可危。</p><h2 id="Anthropic-AI法务插件发布：功能解析">Anthropic AI法务插件发布：功能解析</h2><p>这款引发市场巨震的AI插件，究竟有何魔力？Anthropic展示了其Claude模型在法律领域的深度垂直应用，主要功能包括：</p><ol><li><strong>全自动合同审查与起草</strong>：用户只需输入简单的自然语言指令，插件即可在几秒钟内起草出符合当地法律法规、严谨无误的商业合同。它还能自动通过审核流程，指出合同中的风险点并提出修改建议，效率是人类律师的数百倍。</li><li><strong>实时合规性监测</strong>：无缝集成到企业现有的工作流中，实时监控企业运营中的合规风险，从税务合规到劳动法务，AI全天候在线，不再需要昂贵的法务软件订阅。</li><li><strong>复杂案件分析与预测</strong>：基于海量判例库，精准分析诉讼策略，甚至能预测案件走向，其逻辑推理能力达到了资深合伙人级别。</li><li><strong>跨Jurisdiction适配</strong>：无论是大陆法系还是英美法系，插件都能自适应切换，彻底打破了法律服务的地域壁垒。</li></ol><h2 id="蝴蝶效应：对其他专业领域的冲击">蝴蝶效应：对其他专业领域的冲击</h2><p>Anthropic的这一举措，不仅仅是针对法律行业，它向世界释放了一个信号：<strong>传统的专业服务壁垒正在崩塌</strong>。</p><h3 id="1-软件行业-SaaS">1. 软件行业 (SaaS)</h3><p>正如市场反应所展示的，SaaS行业首当其冲。以往企业为了管理法务、税务、HR，需要购买昂贵的专用软件。现在，一个通用的AI模型加上一个专业插件，就能替代复杂的ERP系​​统。<strong>软件不再是工具，AI本身就是服务</strong>。</p><h3 id="2-会计与审计">2. 会计与审计</h3><p>既然法律条文可以被AI完美解析，那么会计准则同样不在话下。未来，AI审计师可能比人类更早发现财务报表中的猫腻，传统的会计师事务所面临巨大的转型压力。</p><h3 id="3-目前的咨询业">3. 目前的咨询业</h3><p>高端咨询依赖的信息差和分析框架，正在被AI迅速抹平。当企业主可以直接问AI“如何优化我的供应链”并得到可执行的方案时，昂贵的咨询PPT还有人买单吗？</p><h2 id="结语">结语</h2><p>“软件已死”或许言过其实，但<strong>传统的软件商业模式确实已死</strong>。Anthropic的AI法务插件只是第一块多米诺骨牌。在这个AI为王的时代，我们要么成为驾驭AI的人，要么成为被AI替代的成本。</p><p>未来的竞争，不再是软件功能的竞争，而是<strong>模型智力</strong>的竞争。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/anthropic_ai_legal_crash.png&quot; alt=&quot;软件已死&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;软件行业的“至暗时刻”&quot;&gt;软件行业的“至暗时刻”&lt;/h2&gt;
-&lt;p&gt;就在刚刚，华尔街经历了一场惊心动魄的“黑色时刻”。随着Anthr</summary>
-      
-    
-    
-    
-    <category term="IT技术" scheme="https://www.exlink.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="AI" scheme="https://www.exlink.top/tags/AI/"/>
-    
-    <category term="Anthropic" scheme="https://www.exlink.top/tags/Anthropic/"/>
-    
-    <category term="软件已死" scheme="https://www.exlink.top/tags/%E8%BD%AF%E4%BB%B6%E5%B7%B2%E6%AD%BB/"/>
-    
-    <category term="市场崩盘" scheme="https://www.exlink.top/tags/%E5%B8%82%E5%9C%BA%E5%B4%A9%E7%9B%98/"/>
     
   </entry>
   
