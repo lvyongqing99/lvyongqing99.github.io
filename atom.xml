@@ -6,7 +6,7 @@
   <link href="https://www.exlink.top/atom.xml" rel="self"/>
   
   <link href="https://www.exlink.top/"/>
-  <updated>2026-10-25T13:45:32.761Z</updated>
+  <updated>2026-10-25T14:15:44.654Z</updated>
   <id>https://www.exlink.top/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>美国是怎么封禁DeepSeek的？——DHS排除令深度解析及其理由可靠性分析</title>
+    <link href="https://www.exlink.top/2026/10/25/IT%E6%8A%80%E6%9C%AF/us-dhs-ban-deepseek-analysis/"/>
+    <id>https://www.exlink.top/2026/10/25/IT%E6%8A%80%E6%9C%AF/us-dhs-ban-deepseek-analysis/</id>
+    <published>2026-10-25T14:00:00.000Z</published>
+    <updated>2026-10-25T14:15:44.654Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、事件回顾：一道“排除与清除令”">一、事件回顾：一道“排除与清除令”</h2><p>2026年10月20日，美国国土安全部（DHS）在《联邦公报》（Federal Register）上正式刊登了编号为 <strong>Exclusion and Removal Order #2026-01</strong> 的命令（91 FR 66346，案卷号 DHS-2026-0628）。据公开报道，该命令实际早在 2026 年 7 月 24 日即已签署，10 月才正式公告。</p><p>命令的核心内容可以概括为“三个清”：</p><table><thead><tr><th>动作</th><th>具体要求</th></tr></thead><tbody><tr><td><strong>采购清</strong></td><td>联邦文职行政机构（FCEB）不得采购杭州深度求索人工智能基础技术研究有限公司及其关联公司的任何产品、软件和服务</td></tr><tr><td><strong>存量清</strong></td><td>已经部署在机构信息系统中的 DeepSeek 模型、应用须移除，并从授权产品清单中删除</td></tr><tr><td><strong>衍生清</strong></td><td>使用 DeepSeek 技术开发的第三方产品和服务（如基于其开源权重微调的模型、集成其能力的工具）一并清理</td></tr></tbody></table><p>DHS 给出的理由主要有两条：</p><ol><li><strong>数据外流风险</strong>：DeepSeek 的服务器位于中国，担心政府雇员提交的信息被传回中国；</li><li><strong>模型安全风险</strong>：模型及软件可能存在漏洞乃至恶意代码。</li></ol><p>中国商务部随后回应称，美方以所谓国家安全为由，对中国人工智能企业采取歧视性限制措施，是典型的<strong>泛化国家安全概念、滥用行政手段打压中国企业</strong>的行为。</p><h2 id="二、美国是“怎么”封的：法律工具与执行路径">二、美国是“怎么”封的：法律工具与执行路径</h2><h3 id="2-1-法律依据：FASCSA">2.1 法律依据：FASCSA</h3><p>这次命令并不是总统行政令，而是依据 <strong>2018 年《联邦采购供应链安全法》（FASCSA）</strong> 发布的。该法设立了“联邦采购安全委员会”（FASC），由其评估供应链风险并向 DHS、国防部、国家情报总监（DNI）提出建议，再由各部门首长发布针对本系统的“排除令”（禁止采购）和“清除令”（拆除存量）。</p><p>这条路径的特点是：</p><ul><li><strong>程序门槛低</strong>：不需要国会立法，不需要公开详细证据，大量风险评估以涉密或“敏感”信息为基础；</li><li><strong>适用范围定向</strong>：只约束联邦政府自身采购，不直接禁止美国企业或个人使用 DeepSeek；</li><li><strong>可复制性强</strong>：这是 FASCSA 框架下较早的正式排除令之一，等于为日后针对其他外国 AI 或软件产品“打了样”。</li></ul><h3 id="2-2-适用范围">2.2 适用范围</h3><ul><li>本命令约束的是<strong>联邦文职机构</strong>；国防部、情报系统走各自通道，但此前已有类似限制；</li><li>机构如确有需要，可向 CISA 的 FASCSA 执行团队提交书面例外申请；</li><li>对联邦承包商而言，最大的合规压力来自“衍生产品”条款——它们需要排查自家产品是否“用了 DeepSeek”。</li></ul><h3 id="2-3-一条渐进的封禁链条">2.3 一条渐进的封禁链条</h3><p>这道命令并非突然出现，而是一系列动作的延续：</p><pre class="line-numbers language-text" data-language="text"><code class="language-text">2025年初  DeepSeek-R1 爆火 → 美国海军、NASA、国会办公室等陆续内部禁用2025年    多个州政府禁止在政府设备上使用 DeepSeek；国会提出相关禁用法案2026年7月 DHS 签署 FASCSA 排除与清除令2026年10月 命令正式刊登《联邦公报》，在联邦文职系统层面“制度化”<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>可以看到，路径是从“各机构自发禁用”走向“联邦统一的法定排除”，并从“App”扩大到“技术衍生品”。</p><h2 id="三、理由一的可靠性：“服务器在中国，数据可能被传走”">三、理由一的可靠性：“服务器在中国，数据可能被传走”</h2><h3 id="3-1-有一定事实基础的部分">3.1 有一定事实基础的部分</h3><p>客观地说，这条理由<strong>针对 DeepSeek 官方 App 和官方 API 服务</strong>时，确有其逻辑基础：</p><ul><li>DeepSeek 隐私政策写明用户数据存储在中国境内服务器；</li><li>任何云端大模型服务，用户输入的提示词、上传的文件都会到达服务商的服务器；</li><li>对于任何国家的政府来说，<strong>不允许公务人员把工作信息上传到外国服务器</strong>是一项常见的保密规则。中国的党政机关同样禁止在办公中使用境外 AI 服务（ChatGPT、Claude 等本来也无法在国内正规使用）。</li></ul><p>从这个角度看，禁止联邦雇员把公务数据输入 DeepSeek 官方服务，属于<strong>正常的信息安全管理</strong>，本身并不离谱。</p><h3 id="3-2-被明显放大的部分">3.2 被明显放大的部分</h3><p>但这条理由一旦延伸到命令的全部范围，就站不住了：</p><ol><li><p><strong>开源权重与云服务是两回事</strong><br>DeepSeek 的核心模型以 MIT 等宽松协议开源权重。一个机构把权重下载下来，部署在自己机房或美国本土云（AWS、Azure 等都上架过 DeepSeek 模型）上离线运行，<strong>数据根本不会出境</strong>。模型权重本质上是一堆矩阵参数，它不会自己“联网回传”。用“服务器在中国”去论证禁止本地部署的开源模型，逻辑上不成立。</p></li><li><p><strong>“衍生产品”条款与数据理由脱节</strong><br>美国企业基于 DeepSeek 开源权重微调、部署在美国服务器上的产品，与中国服务器毫无关系。把它们一并清除，说明命令真正针对的不是“数据去了哪里”，而是“技术来自哪里”。</p></li><li><p><strong>双重标准</strong><br>美国的《云法案》（CLOUD Act）同样允许美国政府调取美国企业存储在海外的数据，斯诺登事件也揭示过大规模监控。按“所在国法律可能要求企业交出数据”的标准，美国云服务在其他国家也同样“不安全”。这一理由的适用是<strong>选择性的</strong>。</p></li></ol><p><strong>结论</strong>：理由一对于“官方云服务”成立，对于“开源权重本地部署”和“第三方衍生产品”基本不成立。</p><h2 id="四、理由二的可靠性：“模型可能有漏洞”">四、理由二的可靠性：“模型可能有漏洞”</h2><h3 id="4-1-曾被引用的证据">4.1 曾被引用的证据</h3><p>2025 年以来，美国方面引用过一些第三方测评：</p><ul><li>部分安全公司测试称 DeepSeek-R1 在越狱（jailbreak）测试中防护较弱；</li><li>有研究报告称其 App 存在数据传输加密不足等问题；</li><li>NIST 下属机构的评估报告称其在部分安全基准上落后于美国前沿模型，并带有特定的内容审查倾向。</li></ul><h3 id="4-2-为什么说这条理由很难成立">4.2 为什么说这条理由很难成立</h3><ol><li><p><strong>“可能有漏洞”是一个不可证伪的标准</strong><br>世界上不存在没有漏洞的软件。GPT、Claude、Gemini、Llama 都被反复发现过越狱、提示注入、数据泄露等问题。如果“可能有漏洞”就足以禁用，那么所有大模型都应被禁。实际处理方式通常是<strong>打补丁、加护栏</strong>，而不是按国籍拉黑。</p></li><li><p><strong>越狱防护弱 ≠ 对使用者有害</strong><br>“越狱容易”指的是模型容易被诱导输出不当内容，这是内容安全问题，并不意味着模型会攻击部署它的机构系统。把这类问题包装成“国家安全威胁”，存在概念偷换。</p></li><li><p><strong>开源反而是最可审计的形态</strong><br>DeepSeek 公开了权重和技术报告，全球研究者都可以检查、复现、做红队测试。相比之下，闭源模型才是真正的“黑箱”。如果真担心“后门”，开源模型恰恰是最容易被验证的。至今，<strong>没有公开、可复现的证据</strong>证明 DeepSeek 模型权重中存在主动回传数据或破坏系统的后门。</p></li><li><p><strong>证据不公开</strong><br>FASCSA 程序允许依据非公开信息作出决定。命令中“可能”“潜在”的措辞多，具体可验证的证据少，外界无法评估其严重程度。</p></li></ol><p><strong>结论</strong>：理由二属于<strong>普遍性风险被特定化</strong>——同样的风险存在于所有大模型，却只针对一家中国公司采取最严厉的“清除”措施，其可靠性很弱。</p><h2 id="五、深层原因：真正驱动这道命令的是什么？">五、深层原因：真正驱动这道命令的是什么？</h2><p>剥开安全外衣，可以看到几层更本质的动因。</p><h3 id="5-1-技术竞争：DeepSeek-动摇了“算力护城河”叙事">5.1 技术竞争：DeepSeek 动摇了“算力护城河”叙事</h3><p>DeepSeek 以远低于美国同行的训练成本，做出了性能逼近前沿的模型，并且开源、低价。这直接冲击了两件事：</p><ul><li>美国以芯片出口管制遏制中国 AI 发展的政策效果受到质疑；</li><li>美国 AI 巨头“高投入—高定价”的商业模式受到价格压力。</li></ul><p>在政府采购这个高价值、示范性强的市场中排除 DeepSeek，本质上是为本国 AI 企业<strong>保留市场</strong>。</p><h3 id="5-2-遏制开源扩散：“衍生条款”才是重点">5.2 遏制开源扩散：“衍生条款”才是重点</h3><p>命令最值得注意的是“第三方衍生产品也要清”。DeepSeek 开源后，大量美国及全球开发者基于它做微调、蒸馏和集成。这条条款释放的信号是：<strong>用了中国开源模型，就可能失去美国政府这个客户</strong>。它将寒蝉效应从政府传导到承包商，再传导到整个产业链，从而抑制中国开源模型在美国生态中的渗透。</p><h3 id="5-3-政治逻辑：对华强硬的“安全化”惯性">5.3 政治逻辑：对华强硬的“安全化”惯性</h3><p>从华为、中兴，到 TikTok、大疆，再到 DeepSeek，美国已形成一套成熟流程：<strong>以“国家安全”立项 → 以涉密评估为依据 → 先政府后社会逐步扩大限制</strong>。在两党对华强硬共识下，对中国科技企业采取限制几乎没有政治成本，反而能获得政治收益。</p><h3 id="5-4-标准与话语权之争">5.4 标准与话语权之争</h3><p>AI 治理规则正在形成期。通过给中国模型贴上“不安全”“不可信”的标签，美国试图在“可信 AI”的标准和叙事上占据主导，并影响盟友的采购决策。</p><h2 id="六、如何看待商务部的回应">六、如何看待商务部的回应</h2><p>商务部“泛化国家安全概念、滥用行政手段”的批评，结合上文分析，有相当的事实支撑：</p><ul><li><strong>泛化</strong>：把“官方云服务数据出境”这一有限风险，扩展到开源权重本地部署乃至第三方衍生品，正是安全概念的泛化；</li><li><strong>歧视性</strong>：同类风险存在于所有大模型，但只针对中国企业采取“清除”措施；</li><li><strong>行政手段</strong>：依靠证据不公开的行政程序，而非透明、可质疑的技术评估。</li></ul><p>当然，也应客观承认：<strong>各国政府限制公务人员使用外国云端 AI 服务，是普遍的保密实践</strong>，中国自身也是如此。争议的焦点不在于“政府能否管理自己的采购”，而在于<strong>限制的范围是否与风险相称、标准是否一视同仁</strong>。</p><h2 id="七、影响与展望">七、影响与展望</h2><ol><li><strong>对 DeepSeek</strong>：美国联邦政府本就不是其主要市场，直接商业损失有限；但“衍生条款”可能影响其开源模型在美国企业中的采用。</li><li><strong>对美国承包商</strong>：需要排查软件物料清单（SBOM）和 AI 模型来源，合规成本上升，“模型血统审查”可能成为新常态。</li><li><strong>对全球开源生态</strong>：开源本应无国界，若“模型国籍”成为采购门槛，AI 开源生态可能走向阵营化、碎片化。</li><li><strong>对中国 AI 产业</strong>：外部限制会倒逼更多精力投向国内与“一带一路”等市场，同时在开源透明、安全审计方面做得更扎实，用可验证的安全性回应质疑，才是最有力的反驳。</li></ol><h2 id="八、结语">八、结语</h2><p>美国此次封禁 DeepSeek，<strong>手段上</strong>是借助 FASCSA 框架将零散禁令制度化、并把范围从产品扩张到技术衍生品；<strong>理由上</strong>，“数据出境”只对官方云服务成立，“可能有漏洞”则是一个对所有模型都适用的普遍性风险；<strong>动机上</strong>，更多出于技术竞争、市场保护和遏制中国开源 AI 影响力的考量。</p><p>可以说，这是一场“以安全之名、行竞争之实”的科技博弈。而在开源时代，技术的优劣最终要由开发者和用户用脚投票——行政命令可以划掉一份采购清单，却很难抹掉一项技术的真实价值。</p><hr><h2 id="附录：DHS-命令公告原文（《联邦公报》）">附录：DHS 命令公告原文（《联邦公报》）</h2><p>以下为美国政府出版局（GPO）发布的《联邦公报》第 91 卷第 201 期公告原文（FR Doc No: 2026-21447）。公告正文之后附有经签署的命令扫描件（第 66347–66350 页，原文中以图片形式刊登），可通过下方链接查看。</p><ul><li>原文 HTML（GovInfo）：<a href="https://www.govinfo.gov/content/pkg/FR-2026-10-20/html/2026-21447.htm">https://www.govinfo.gov/content/pkg/FR-2026-10-20/html/2026-21447.htm</a></li><li>原文 PDF（含签署命令扫描页）：<a href="https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21447.pdf">https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21447.pdf</a></li><li>联邦公报页面：<a href="https://www.federalregister.gov/d/2026-21447">https://www.federalregister.gov/d/2026-21447</a></li><li>案卷（<a href="http://Regulations.gov">Regulations.gov</a>）：搜索 DHS Docket Number <strong>DHS-2026-0628</strong></li></ul><h3 id="英文原文">英文原文</h3><pre class="line-numbers language-text" data-language="text"><code class="language-text">[Federal Register Volume 91, Number 201 (Tuesday, October 20, 2026)][Notices][Pages 66346-66350]From the Federal Register Online via the Government Publishing Office [www.gpo.gov][FR Doc No: 2026-21447]-----------------------------------------------------------------------DEPARTMENT OF HOMELAND SECURITY[Docket No. DHS-2026-0628]Notice of Order Regarding Exclusion and Removal of DeepSeekProducts From Federal Civilian Executive Branch Information TechnologySystems and ProcurementsAGENCY: Department of Homeland Security (DHS).ACTION: Notice of order.-----------------------------------------------------------------------SUMMARY: The Department of Homeland Security is publishing notice ofthe Secretary of Homeland Security's issuance of an order (1) excludinginformation technology products and services developed by HangzhouDeepSeek Artificial Intelligence Co., Ltd (DeepSeek), to includeaffiliated entities as defined in applicable regulations, from federalcivilian agency procurements; and, (2) removing all DeepSeek andDeepSeek-affiliate products, and third-party products and servicesdeveloped using DeepSeek implementations, from civilian agencyinformation technology.FOR FURTHER INFORMATION CONTACT: FASCSA Order Implementation Team CISACybersecurity Division.SUPPLEMENTARY INFORMATION: Pursuant to the authority granted by theFederal Acquisition Supply Chain Security Act of 2018, 41 U.S.C. 1321-1328, and implementing regulations at 41 CFR 201-1, following review ofthe Federal Acquisition Security Council Recommendation and affiliatedevidence, the Secretary of Homeland Security has ordered: (1) exclusionof information technology products and services developed by HangzhouDeepSeek Artificial Intelligence Co., Ltd (DeepSeek), to includeaffiliated entities as defined in 48 CFR 2.101, from federal civilianagency procurements; and (2) removal of all DeepSeek and DeepSeek-affiliate products, and third-party products and services developedusing DeepSeek implementations, from civilian agency informationtechnology.    A copy of the signed order is contained in the accompanyingAppendix and can be found at https://www.regulations.gov by searchingfor DHS Docket Number DHS-2026-0628.James H. Percival II,General Counsel, U.S. Department of Homeland Security.AppendixBILLING CODE 9111-LF-P[[Page 66347]][GRAPHIC] [TIFF OMITTED] TN20OC26.041[[Page 66348]][GRAPHIC] [TIFF OMITTED] TN20OC26.042[[Page 66349]][GRAPHIC] [TIFF OMITTED] TN20OC26.043[[Page 66350]][GRAPHIC] [TIFF OMITTED] TN20OC26.044[FR Doc. 2026-21447 Filed 10-19-26; 8:45 am]BILLING CODE 9111-LF-C<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="中文译文（参考）">中文译文（参考）</h3><blockquote><p><strong>美国国土安全部</strong><br>〔案卷号 DHS-2026-0628〕</p><p><strong>关于将 DeepSeek 产品排除并清除出联邦文职行政部门信息技术系统及采购的命令公告</strong></p><p><strong>机构</strong>：国土安全部（DHS）<br><strong>行动</strong>：命令公告</p><p><strong>摘要</strong>：国土安全部现公告国土安全部部长已发布一项命令：（1）将杭州深度求索人工智能基础技术研究有限公司（DeepSeek，含适用法规所界定的关联实体）开发的信息技术产品和服务排除出联邦文职机构采购；（2）将所有 DeepSeek 及其关联公司的产品，以及使用 DeepSeek 实现开发的第三方产品和服务，从文职机构信息技术系统中清除。</p><p><strong>联系方式</strong>：CISA 网络安全司 FASCSA 命令执行团队。</p><p><strong>补充信息</strong>：根据《2018 年联邦采购供应链安全法》（《美国法典》第 41 编第 1321–1328 条）授权及《联邦法规》第 41 编第 201-1 部分的实施细则，在审查联邦采购安全委员会的建议及相关证据后，国土安全部部长命令：（1）将 DeepSeek（含《联邦法规》第 48 编第 2.101 条界定的关联实体）开发的信息技术产品和服务排除出联邦文职机构采购；（2）将所有 DeepSeek 及其关联公司的产品，以及使用 DeepSeek 实现开发的第三方产品和服务，从文职机构信息技术中清除。</p><p>经签署的命令副本载于随附附录，亦可在 <a href="http://regulations.gov">regulations.gov</a> 搜索案卷号 DHS-2026-0628 获取。</p><p>詹姆斯·H·珀西瓦尔二世<br>美国国土安全部总法律顾问</p></blockquote><blockquote><p>注：签署命令正文（含具体风险认定理由）在《联邦公报》中以扫描图片形式刊登，未提供文字版，完整内容请以上述 PDF 为准。</p></blockquote><hr><blockquote><p>参考资料：美国《联邦公报》91 FR 66346（DHS-2026-0628）；FASCSA 相关法律文本；Haynes Boone、ExecutiveGov、CyberScoop、The Hacker News 等公开报道；中国商务部新闻发言人答记者问。</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;一、事件回顾：一道“排除与清除令”&quot;&gt;一、事件回顾：一道“排除与清除令”&lt;/h2&gt;
+&lt;p&gt;2026年10月20日，美国国土安全部（DHS）在《联邦公报》（Federal Register）上正式刊登了编号为 &lt;strong&gt;Exclusion and Remova</summary>
+      
+    
+    
+    
+    <category term="IT技术" scheme="https://www.exlink.top/categories/IT%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="DeepSeek" scheme="https://www.exlink.top/tags/DeepSeek/"/>
+    
+    <category term="数据安全" scheme="https://www.exlink.top/tags/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/"/>
+    
+    <category term="人工智能" scheme="https://www.exlink.top/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="中美科技" scheme="https://www.exlink.top/tags/%E4%B8%AD%E7%BE%8E%E7%A7%91%E6%8A%80/"/>
+    
+    <category term="供应链安全" scheme="https://www.exlink.top/tags/%E4%BE%9B%E5%BA%94%E9%93%BE%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>DeepSeek V4.1-Flash-1017 横空出世：梁文锋宣布新一代模型，性能大幅跃升、实现自我强化学习、价格更亲民</title>
@@ -239,13 +272,13 @@
     <category term="案例分析" scheme="https://www.exlink.top/categories/%E8%B4%A2%E7%A8%8E%E7%9F%A5%E8%AF%86/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/"/>
     
     
+    <category term="增值税" scheme="https://www.exlink.top/tags/%E5%A2%9E%E5%80%BC%E7%A8%8E/"/>
+    
     <category term="进项税转出" scheme="https://www.exlink.top/tags/%E8%BF%9B%E9%A1%B9%E7%A8%8E%E8%BD%AC%E5%87%BA/"/>
     
     <category term="税务合规" scheme="https://www.exlink.top/tags/%E7%A8%8E%E5%8A%A1%E5%90%88%E8%A7%84/"/>
     
     <category term="金龙鱼" scheme="https://www.exlink.top/tags/%E9%87%91%E9%BE%99%E9%B1%BC/"/>
-    
-    <category term="增值税" scheme="https://www.exlink.top/tags/%E5%A2%9E%E5%80%BC%E7%A8%8E/"/>
     
   </entry>
   
@@ -630,38 +663,6 @@
     <category term="EC重置" scheme="https://www.exlink.top/tags/EC%E9%87%8D%E7%BD%AE/"/>
     
     <category term="硬件维修" scheme="https://www.exlink.top/tags/%E7%A1%AC%E4%BB%B6%E7%BB%B4%E4%BF%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>公司开业大吉：一马当先开新局，策马扬鞭谱华章</title>
-    <link href="https://www.exlink.top/2026/02/25/company-opening-2026/"/>
-    <id>https://www.exlink.top/2026/02/25/company-opening-2026/</id>
-    <published>2026-02-25T00:00:00.000Z</published>
-    <updated>2026-02-24T14:06:51.208Z</updated>
-    
-    <content type="html"><![CDATA[<h1>🚀 2026年初九开工大吉</h1><p>马到功成！新的一年，我们以一马当先的姿态开创新局，以策马扬鞭的拼搏精神谱写华章。祝公司在新的一年里大展宏图，业绩长虹！</p><p><img src="/images/company_opening_poster.png" alt="开业海报"></p><h2 id="🎉-核心主题">🎉 核心主题</h2><p><strong>一马当先开新局，策马扬鞭谱华章</strong></p><h2 id="💼-寄语">💼 寄语</h2><p>在这个充满希望与挑战的新一年，我们全体同仁将以满腔的热情和昂扬的斗志，迎接新的机遇。让我们携手共进，创造更加辉煌的明天！</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;🚀 2026年初九开工大吉&lt;/h1&gt;
-&lt;p&gt;马到功成！新的一年，我们以一马当先的姿态开创新局，以策马扬鞭的拼搏精神谱写华章。祝公司在新的一年里大展宏图，业绩长虹！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/company_opening_poster.png&quot; </summary>
-      
-    
-    
-    
-    <category term="经济新闻" scheme="https://www.exlink.top/categories/%E7%BB%8F%E6%B5%8E%E6%96%B0%E9%97%BB/"/>
-    
-    
-    <category term="新年" scheme="https://www.exlink.top/tags/%E6%96%B0%E5%B9%B4/"/>
-    
-    <category term="公司新闻" scheme="https://www.exlink.top/tags/%E5%85%AC%E5%8F%B8%E6%96%B0%E9%97%BB/"/>
-    
-    <category term="开业大吉" scheme="https://www.exlink.top/tags/%E5%BC%80%E4%B8%9A%E5%A4%A7%E5%90%89/"/>
-    
-    <category term="海报" scheme="https://www.exlink.top/tags/%E6%B5%B7%E6%8A%A5/"/>
     
   </entry>
   
